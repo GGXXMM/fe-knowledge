@@ -1,24 +1,24 @@
 # 前端知识整理
 
 ## 一、数据结构与算法
-1. [排序算法]()
-2. [递归和回溯算法]()
-3. [深度优先和广度优先搜索]()
-4. [二分搜索]()
-5. [动态规划]()
-6. [贪心算法]()
+1. [排序算法](https://github.com/GGXXMM/FE-Knowledge/issues/43)
+2. [递归和回溯算法](https://github.com/GGXXMM/FE-Knowledge/issues/44)
+3. [深度优先和广度优先搜索](https://github.com/GGXXMM/FE-Knowledge/issues/45)
+4. [二分搜索](https://github.com/GGXXMM/FE-Knowledge/issues/46)
+5. [动态规划](https://github.com/GGXXMM/FE-Knowledge/issues/47)
+6. [贪心算法](https://github.com/GGXXMM/FE-Knowledge/issues/48)
 
 ## 二、HTML、CSS
-1. [盒模型]()
-2. [实现水平居中的方案]()
-3. [实现垂直居中的方案]()
-4. [实现水平垂直居中的方案]()
-5. [两列/三列/多列布局实现方案]()
-6. [BFC及其应用]()
-7. [清除浮动的方法]()
-8. [常见的兼容性问题]()
-9. [CSS3动画]()
-10. [CSS(3)绘制三角形、圆形、扇形、菱形]()
+1. [盒子模型](https://github.com/GGXXMM/FE-Knowledge/issues/49)
+2. [实现水平居中布局的方案](https://github.com/GGXXMM/FE-Knowledge/issues/50)
+3. [实现垂直居中布局的方案](https://github.com/GGXXMM/FE-Knowledge/issues/51)
+4. [实现水平垂直居中布局的方案](https://github.com/GGXXMM/FE-Knowledge/issues/52)
+5. [两列/三列/多列布局实现的方案](https://github.com/GGXXMM/FE-Knowledge/issues/53)
+6. [BFC及其应用](https://github.com/GGXXMM/FE-Knowledge/issues/54)
+7. [清除浮动的方法](https://github.com/GGXXMM/FE-Knowledge/issues/55)
+8. [常见的兼容性问题](https://github.com/GGXXMM/FE-Knowledge/issues/56)
+9. [CSS绘制三角形、圆形、扇形、菱形](https://github.com/GGXXMM/FE-Knowledge/issues/57)
+10. [CSS3动画](https://github.com/GGXXMM/FE-Knowledge/issues/58))
 
 ## 三、JavaScript
 1. [JavaScript的原型与原型链](https://github.com/GGXXMM/Blog-Knowledge/issues/1)
@@ -38,6 +38,7 @@
 15. [JavaScript模拟实现js函数柯里化](https://github.com/GGXXMM/FE-Knowledge/issues/15)
 16. [手写防抖和节流](https://github.com/GGXXMM/FE-Knowledge/issues/16)
 17. [手写js浅拷贝和深拷贝](https://github.com/GGXXMM/FE-Knowledge/issues/17)
+18. [js动画]()
 
 ## 四、ES6
 1. [ES6 之 let 和 const](https://github.com/mqyqingfeng/Blog/issues/82)
@@ -60,19 +61,22 @@
 18. [ES6 之 我们来聊聊装饰器](https://github.com/mqyqingfeng/Blog/issues/109)
 19. [ES6 之 私有变量的实现](https://github.com/mqyqingfeng/Blog/issues/110)
 20. [ES6 完全使用手册](https://github.com/mqyqingfeng/Blog/issues/111)
+21. [手写一个Promise]()
 
 ## 五、框架
 ### Vue
 1. [vue2.0双向数据绑定的原理](https://github.com/GGXXMM/FE-Knowledge/issues/33)
 2. [Vue2.0响应式原理中Object.defineProperty有什么缺陷？为什么在Vue3.0采用了Proxy？](https://github.com/GGXXMM/FE-Knowledge/issues/34)
-3. [Virtual DOM？它是如何提升性能的？](https://github.com/GGXXMM/FE-Knowledge/issues/35)
-4. [Vue的diff时间复杂度如何从O(n^3)优化到 O(n)？](https://github.com/GGXXMM/FE-Knowledge/issues/36)
-5. [Vue父子组件通信的方式](https://github.com/GGXXMM/FE-Knowledge/issues/37)
-6. [Vue中，子组件为何不可以修改父组件传递的Props？](https://github.com/GGXXMM/FE-Knowledge/issues/38)
-7. [Vue的父组件和子组件生命周期钩子执行顺序是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/39)
-8. [Vuex的设计思想](https://github.com/GGXXMM/FE-Knowledge/issues/40)
-9. [Vuex中的getters和state的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/41)
-10. [为什么Vuex的mutation中不能做异步操作？](https://github.com/GGXXMM/FE-Knowledge/issues/42)
+3. [介绍Object.defineProperty()](https://github.com/GGXXMM/FE-Knowledge/issues/60)
+4. [介绍Proxy]()
+5. [Virtual DOM？它是如何提升性能的？](https://github.com/GGXXMM/FE-Knowledge/issues/35)
+6. [Vue的diff时间复杂度如何从O(n^3)优化到 O(n)？](https://github.com/GGXXMM/FE-Knowledge/issues/36)
+7. [Vue父子组件通信的方式](https://github.com/GGXXMM/FE-Knowledge/issues/37)
+8. [Vue中，子组件为何不可以修改父组件传递的Props？](https://github.com/GGXXMM/FE-Knowledge/issues/38)
+9. [Vue的父组件和子组件生命周期钩子执行顺序是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/39)
+10. [Vuex的设计思想](https://github.com/GGXXMM/FE-Knowledge/issues/40)
+11. [Vuex中的getters和state的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/41)
+12. [为什么Vuex的mutation中不能做异步操作？](https://github.com/GGXXMM/FE-Knowledge/issues/42)
 
 ## 六、工具
 ### webpack
