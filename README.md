@@ -1,6 +1,16 @@
 # 前端知识整理
 
 ## 一、数据结构与算法
+### 常见数据结构
+1. 数组
+2. 字符串
+3. 链表
+4. 栈
+5. 队列
+6. 双端队列
+7. 树
+
+### 算法
 1. [排序算法](https://github.com/GGXXMM/FE-Knowledge/issues/43)
 2. [递归和回溯算法](https://github.com/GGXXMM/FE-Knowledge/issues/44)
 3. [深度优先和广度优先搜索](https://github.com/GGXXMM/FE-Knowledge/issues/45)
