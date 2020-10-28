@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;/* 水平居中 */
+  align-items: center;/* 垂直居中 */
+  height: 400px;
+}
+.inner {
+  width: 200px;
+  height: 200px;
+  background: plum;
+}
