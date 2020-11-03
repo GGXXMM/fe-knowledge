@@ -1,0 +1,11 @@
+#parent {
+  display: grid;
+  grid-template-columns: 100px auto;
+  height: 500px;
+}
+#left {
+  background: grey;
+}
+#right {
+  background: plum;
+}

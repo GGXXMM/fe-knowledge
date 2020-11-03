@@ -1,0 +1,19 @@
+#parent {
+  position: relative;
+}
+#left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 500px;
+  background: yellow;
+}
+#right {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  right: 0;
+  height: 500px;
+  background: green;
+}

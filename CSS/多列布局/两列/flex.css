@@ -1,0 +1,12 @@
+#parent {
+  display: flex;
+  height: 500px;
+}
+#left {
+  width: 100px;
+  background: grey;
+}
+#right {
+  flex: 1;/* 均分了父元素剩余空间 */
+  background: pink;
+}
