@@ -1,0 +1,14 @@
+#parent {
+  display: grid;
+  grid-template-columns: 100px 200px auto;
+  height: 500px;
+}
+#left {
+  background: yellowgreen;
+}
+#center {
+  background: plum;
+}
+#right {
+  background: pink;
+}

@@ -1,0 +1,17 @@
+#left {
+  float: left;
+  width: 100px;
+  height: 500px;
+  background: yellowgreen;
+}
+#center {
+  float: left;
+  width: 200px;
+  height: 500px;
+  background: plum;
+}
+#right {
+  overflow: hidden;
+  height: 500px;
+  background: pink;
+}
