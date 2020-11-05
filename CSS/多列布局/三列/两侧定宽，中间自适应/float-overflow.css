@@ -1,0 +1,17 @@
+#parent>div {
+  height: 500px;
+}
+#left {
+  float: left;
+  width: 100px;
+  background: yellow;
+}
+#right {
+  float: right;
+  width: 200px;
+  background: yellowgreen;
+}
+#center {
+  overflow: hidden;
+  background: pink;
+}

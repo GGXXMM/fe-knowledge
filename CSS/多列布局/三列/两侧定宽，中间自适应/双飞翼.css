@@ -1,0 +1,27 @@
+#parent>div {
+  float: left;
+  height: 500px;
+}
+#parent {
+  padding: 0; 
+  overflow:hidden;
+}
+#center {
+  width: 100%;/* 中间宽度是100%，给内部元素设置外边距，就可以让出两边位置 */
+  background: pink;
+}
+#center h1 {
+  margin: 0 200px 0 100px;/* 设置两侧margin，中间内容不和两侧叠加 */
+}
+#left {
+  margin-left: -100%;/* 为负的中间盒子的宽度 */
+  width: 100px;
+  background: yellow;
+  opacity: 0.5;
+}
+#right {
+  margin-left: -200px;/* 为负的自己的宽度 */
+  width: 200px;
+  background: greenyellow;
+  opacity: 0.5;
+}

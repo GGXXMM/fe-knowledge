@@ -1,0 +1,16 @@
+#parent {
+  display: flex;
+  height: 500px;
+}
+#left {
+  width: 100px;
+  background: yellow;
+}
+#center {
+  flex: 1;
+  background: pink;
+}
+#right {
+  width: 200px;
+  background: yellowgreen;
+}

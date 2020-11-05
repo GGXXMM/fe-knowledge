@@ -1,0 +1,19 @@
+#parent {
+  display: table;
+  width: 100%;
+  height: 500px;
+}
+#parent>div {
+  display: table-cell;
+}
+#left {
+  width: 100px;
+  background: yellow;
+}
+#center {
+  background: pink;
+}
+#right {
+  width: 200px;
+  background: yellowgreen;
+}
