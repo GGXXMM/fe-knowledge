@@ -1,0 +1,13 @@
+#parent {
+  display: flex;
+  height: 500px;
+}
+.column {
+  flex: 1;
+}
+.column:nth-child(odd) {
+  background: pink;
+}
+.column:nth-child(even) {
+  background: yellowgreen;
+}

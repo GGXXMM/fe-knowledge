@@ -1,0 +1,11 @@
+#parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 500px;
+}
+.column:nth-child(odd) {
+  background: pink;
+}
+.column:nth-child(even) {
+  background: yellowgreen;
+}
