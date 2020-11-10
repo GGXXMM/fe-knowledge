@@ -1,0 +1,14 @@
+#parent {
+  overflow: auto;/* 清除浮动 */
+}
+.column {
+  float: left;
+  width: 25%;
+  height: 500px;
+}
+.column:nth-child(odd){
+  background-color: pink;
+}
+.column:nth-child(even){
+  background-color: yellow;
+}

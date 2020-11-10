@@ -1,0 +1,14 @@
+#parent {
+  display: table;
+  width: 100%;
+  height: 500px;
+}
+.column {
+  display: table-cell;
+}
+.column:nth-child(odd) {
+  background: pink;
+}
+.column:nth-child(even) {
+  background: yellowgreen;
+}
