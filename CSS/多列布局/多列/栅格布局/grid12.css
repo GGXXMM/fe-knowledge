@@ -1,0 +1,83 @@
+@media screen and (max-width: 768px) {
+  .column-xs-1 {
+    width: 8.33333333%;
+  }
+  .column-xs-2 {
+    width: 16.66666667%;
+  }
+  .column-xs-3 {
+    width: 25%;
+  }
+  .column-xs-4 {
+    width: 33.33333333%;
+  }
+  .column-xs-5 {
+    width: 41.66666667%;
+  }
+  .column-xs-6 {
+    width: 50%;
+  }
+  .column-xs-7 {
+    width: 58.33333333%;
+  }
+  .column-xs-8 {
+    width: 66.66666667%;
+  }
+  .column-xs-9 {
+    width: 75%;
+  }
+  .column-xs-10 {
+    width: 83.33333333%;
+  }
+  .column-xs-11 {
+    width: 91.66666667%;
+  }
+  .column-xs-12 {
+    width: 100%;
+  }
+  /*此处设置生成列数*/
+}
+@media screen and (min-width: 768px) {
+  .column-ms-1 {
+    width: 8.33333333%;
+  }
+  .column-ms-2 {
+    width: 16.66666667%;
+  }
+  .column-ms-3 {
+    width: 25%;
+  }
+  .column-ms-4 {
+    width: 33.33333333%;
+  }
+  .column-ms-5 {
+    width: 41.66666667%;
+  }
+  .column-ms-6 {
+    width: 50%;
+  }
+  .column-ms-7 {
+    width: 58.33333333%;
+  }
+  .column-ms-8 {
+    width: 66.66666667%;
+  }
+  .column-ms-9 {
+    width: 75%;
+  }
+  .column-ms-10 {
+    width: 83.33333333%;
+  }
+  .column-ms-11 {
+    width: 91.66666667%;
+  }
+  .column-ms-12 {
+    width: 100%;
+  }
+}
+div[class^="column-xs-"] {
+  float: left;
+}
+div[class^="column-sm-"] {
+  float: left;
+}

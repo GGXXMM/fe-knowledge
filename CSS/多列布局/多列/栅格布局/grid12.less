@@ -1,0 +1,24 @@
+@media screen and (max-width: 768px){
+  .generate-columns(12);     /*此处设置生成列数*/
+  .generate-columns(@n, @i: 1) when (@i <= @n) {
+    .column-xs-@{i} {
+      width: (@i * 100% / @n);
+    }
+    .generate-columns(@n, (@i+1));
+  }
+}
+@media screen and (min-width: 768px){
+  .generate-columns(12);
+  .generate-columns(@n, @i: 1) when (@i <= @n) {
+    .column-ms-@{i} {
+      width: (@i * 100% / @n);
+    }
+    .generate-columns(@n, (@i+1));
+  }
+}
+div[class^="column-xs-"]{
+	float: left;
+}
+div[class^="column-sm-"]{
+	float: left;
+}
