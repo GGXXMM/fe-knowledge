@@ -1,0 +1,14 @@
+#parent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+}
+.row {
+  display: flex;
+  flex: 1;
+}
+.item {
+  flex: 1;
+  border: 1px solid #000;
+}
