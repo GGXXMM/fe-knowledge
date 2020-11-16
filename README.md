@@ -19,16 +19,23 @@
 6. [贪心算法](https://github.com/GGXXMM/FE-Knowledge/issues/48)
 
 ## 二、HTML、CSS
-1. [盒子模型](https://github.com/GGXXMM/FE-Knowledge/issues/49)
-2. [实现水平居中布局的方案](https://github.com/GGXXMM/FE-Knowledge/issues/50)
-3. [实现垂直居中布局的方案](https://github.com/GGXXMM/FE-Knowledge/issues/51)
-4. [实现水平垂直居中布局的方案](https://github.com/GGXXMM/FE-Knowledge/issues/52)
-5. [两列/三列/多列布局实现的方案](https://github.com/GGXXMM/FE-Knowledge/issues/53)
-6. [BFC及其应用](https://github.com/GGXXMM/FE-Knowledge/issues/54)
-7. [清除浮动的方法](https://github.com/GGXXMM/FE-Knowledge/issues/55)
-8. [常见的兼容性问题](https://github.com/GGXXMM/FE-Knowledge/issues/56)
-9. [CSS绘制三角形、圆形、扇形、菱形](https://github.com/GGXXMM/FE-Knowledge/issues/57)
-10. [CSS3动画](https://github.com/GGXXMM/FE-Knowledge/issues/58))
+1. [介绍下重绘和回流](https://github.com/GGXXMM/FE-Knowledge/issues/62)
+2. [盒子模型](https://github.com/GGXXMM/FE-Knowledge/issues/49)
+3. [CSS选择器有哪些？哪些属性可继承？](https://github.com/GGXXMM/FE-Knowledge/issues/63)
+4. [CSS定义的权重？优先级？](https://github.com/GGXXMM/FE-Knowledge/issues/64)
+5. [简述伪类和伪元素](https://github.com/GGXXMM/FE-Knowledge/issues/65)
+6. [CSS3新增的伪类有哪些？](https://github.com/GGXXMM/FE-Knowledge/issues/66)
+7. [实现水平居中布局的方案](https://github.com/GGXXMM/FE-Knowledge/issues/50)
+8. [实现垂直居中布局的方案](https://github.com/GGXXMM/FE-Knowledge/issues/51)
+9. [实现水平垂直居中布局的方案](https://github.com/GGXXMM/FE-Knowledge/issues/52)
+10. [两列/三列/多列布局实现的方案](https://github.com/GGXXMM/FE-Knowledge/issues/53)
+11. [BFC及其应用](https://github.com/GGXXMM/FE-Knowledge/issues/54)
+12. [清除浮动的方法](https://github.com/GGXXMM/FE-Knowledge/issues/55)
+13. [常见的兼容性问题](https://github.com/GGXXMM/FE-Knowledge/issues/56)
+14. [CSS绘制三角形、圆形、扇形、菱形](https://github.com/GGXXMM/FE-Knowledge/issues/57)
+15. [CSS3动画](https://github.com/GGXXMM/FE-Knowledge/issues/58)
+16. [简述Rem及其转换原理](https://github.com/GGXXMM/FE-Knowledge/issues/67)
+17. [如何解决移动端Retina屏1px像素的问题？](https://github.com/GGXXMM/FE-Knowledge/issues/68)
 
 ## 三、JavaScript
 1. [JavaScript的原型与原型链](https://github.com/GGXXMM/Blog-Knowledge/issues/1)
@@ -71,7 +78,7 @@
 18. [ES6 之 我们来聊聊装饰器](https://github.com/mqyqingfeng/Blog/issues/109)
 19. [ES6 之 私有变量的实现](https://github.com/mqyqingfeng/Blog/issues/110)
 20. [ES6 完全使用手册](https://github.com/mqyqingfeng/Blog/issues/111)
-21. [手写一个Promise]()
+21. [手写一个Promise](https://github.com/GGXXMM/FE-Knowledge/issues/61)
 
 ## 五、框架
 ### Vue
