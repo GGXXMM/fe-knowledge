@@ -1,0 +1,11 @@
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.cleafix {
+  /* 触发ie haslayout */
+  *zoom: 1;
+}
