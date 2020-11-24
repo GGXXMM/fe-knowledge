@@ -1,0 +1,15 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation: boxChange 3s ease;
+  -webkit-animation: boxChange 3s ease;
+}
+@keyframes boxChange {
+  from {background: red;}
+  to {background: yellow;}
+}
+@-webkit-keyframes boxChange {
+  from {background: red;}
+  to {background: yellow;}
+}

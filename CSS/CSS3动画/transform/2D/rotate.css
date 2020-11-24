@@ -1,0 +1,4 @@
+.box2 {
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+}
