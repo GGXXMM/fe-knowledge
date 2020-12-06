@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="canvas" width="1024" height="768" style="border: 1px solid #ddd;"></canvas>
+  <script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    /* 线条 */
+    // 1. 绘制直线
+    context.beginPath();// 开始全新路径
+    context.moveTo(100, 0);// 定义线条开始坐标
+    context.lineTo(400, 200);// 定义线条结束坐标
+    // context.closePath();
+
+    context.lineWidth = 20;
+    context.lineCap = 'round';// 线条的帽子：butt 默认无;round 圆的;square 方的
+    context.strokeStyle = 'black';
+    
+    context.stroke();// 绘制
+
+    // 2. 绘制多边形（三角形）
+    context.beginPath();
+    context.moveTo(0, 0);
+    context.lineTo(300, 200);
+    context.lineTo(0, 200);
+    context.lineTo(0,0);
+    // context.closePath();// 绘制的图形是封闭式
+
+    context.lineWidth = 4;
+    context.lineJoin = 'round';// 线条交汇创建的边角类型：bevel斜角;round圆角;miter尖角（默认）
+    context.fillStyle = 'orange';
+    context.strokeStyle = 'red';
+
+    context.fill();// 填充
+    context.stroke();// 绘制
+    
+    // 3. 绘制矩形
+    context.fillStyle = 'green';
+    context.fillRect(300, 0, 150, 75);
+    
+    context.strokeStyle = 'blue';
+    context.strokeRect(500, 0, 150, 75);
+    
+    /* */
+  </script>
+</body>
+</html>
