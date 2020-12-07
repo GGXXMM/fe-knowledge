@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="canvas" width="1024" height="768" style="border: 1px solid #ddd;"></canvas>
+  <script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+
+    /* 文本 */
+    // 1.填充文本
+    context.font = 'bold 30px serif';
+    context.textAlign = 'left';// start（默认）；end；left；right；center
+    context.fillText('你好！', 400,50);
+    // 2.空心文本（无填充色）
+    context.lineWidth = 1;
+    context.textAlign = 'center';
+    context.strokeText('你好！', 400,100);
+
+    context.moveTo(400, 0);
+    context.lineTo(400, 500);
+    context.stroke();
+  </script>
+</body>
+</html>
