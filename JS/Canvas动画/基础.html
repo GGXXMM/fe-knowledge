@@ -46,7 +46,35 @@
     context.strokeStyle = 'blue';
     context.strokeRect(500, 0, 150, 75);
     
-    /* */
+    // 4. 绘制曲线
+    // 圆弧
+    context.beginPath();
+    context.arc(50, 300, 40, 0, 0.5*Math.PI, true);// x,y,r,startAngle,stopAngle,false(默认为false顺时针；true为逆时针)
+    context.lineWidth = 1;
+    context.strokeStyle = 'black';
+    context.stroke();
+
+    // 另一种弧线
+    context.beginPath();
+    context.moveTo(100,300);// 创建起始点
+    context.lineTo(300,300);// 创建水平线 
+    context.arcTo(450, 300, 450, 470, 50); // x1,y1,x2,y2,r (x1,y1)为两切线的交点；(x2,y2)为第二条切线的一点；r弧的半径
+    context.lineTo(450,470);// 创建垂直线
+    context.stroke();
+
+    // 二次贝塞尔曲线
+    context.beginPath();
+    context.moveTo(500, 400);// 起始点
+    context.quadraticCurveTo(700, 700, 600, 400);// cx,cy,x,y (cx,cy)为控制点；(x,y)为终止点
+    context.stroke();
+
+    // 三次贝塞尔曲线
+    context.beginPath();
+    context.moveTo(20, 550);
+    context.bezierCurveTo(200, 400, 300, 600, 550, 550);// c1x,c1y,c2x,c2y,x,y (c1x,c1y)为控制点1；(c2x,c2y)为控制点1；(x,y)为终止点
+    context.stroke();
+
+    /* 文本 */
   </script>
 </body>
 </html>
