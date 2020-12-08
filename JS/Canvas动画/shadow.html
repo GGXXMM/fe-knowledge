@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shadow</title>
+</head>
+<body>
+  <canvas id="canvas" width="1024" height="768" style="border: 1px solid #ddd;"></canvas>
+  <script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    // 阴影
+    ctx.shadowBlur = 10;// 阴影的模糊级别
+    ctx.shadowOffsetX = 10;// 阴影距形状的水平距离
+    ctx.shadowOffsetY = 5;// 阴影距形状的垂直距离
+    ctx.shadowColor = "black";// 阴影颜色
+    ctx.fillStyle = "blue";
+    
+    ctx.fillRect(20,20,100,50);
+  </script>
+</body>
+</html>

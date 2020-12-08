@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>转换</title>
+</head>
+<body>
+  <canvas id="canvas" width="1024" height="768" style="border: 1px solid #ddd;"></canvas>
+  <script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    // 1.scale缩放
+    ctx.strokeRect(5,5,25,15);
+    ctx.scale(2,2);// scaleWidth,scaleHeight(1=100%, 0.5=50%, 2=200%, etc.)
+    ctx.strokeRect(5,5,25,15);
+
+    // 2.rotate旋转
+    // ctx.rotate(20*Math.PI/180);// angle：如需旋转 20 度，计算公式则为 20*Math.PI/180
+    // ctx.fillRect(50,50,100,50);
+
+    // 3.translate重新映射画布的(0,0)起始位置
+    ctx.translate(50,50);
+    ctx.fillRect(0,0,100,50);
+
+    // 4.transform替换绘图的当前转换矩阵
+    ctx.fillStyle="yellow";
+    ctx.fillRect(0,100,100,50);
+    ctx.transform(1,0.5,-0.5,1,30,10);// a,b,c,d,e,f（水平缩放，水平倾斜，垂直倾斜，垂直缩放，水平移动，垂直移动）
+    ctx.fillStyle="red";
+    ctx.fillRect(0,100,100,50);
+  </script>
+</body>
+</html>
