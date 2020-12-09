@@ -5,7 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>放大镜</title>
 </head>
-<body>
-  
+<body style="background: black;">
+  <canvas id="canvas" width="1152" height="768" style="display:block;margin:0 auto;border: 1px solid #ddd;"></canvas>
+  <input type="range" min="0.5" max="3" value="0.5" step="0.01" id="scale-range" style="display:block;margin: 20px auto;">
+  <script>
+    var canvas = document.getElementById('canvas');
+    var slider = document.getElementById('scale-range');
+    var context = canvas.getContext('2d');
+    var image = new Image();
+    window.onload = function() {
+      canvas.width = 1152;
+      canvas.height = 768;
+      var scale = slider.value;
+      console.log('scale', scale)
+      image.src = './img.jpg';
+      image.onload = function() {
+        drawImageByScale(scale)
+      }
+      slider.onmousemove = function() {
+        scale = slider.value;
+        drawImageByScale(scale)
+      }
+    }
+    
+    function drawImageByScale(scale) {
+      var imageWidth = scale * canvas.width;
+      var imageHeight = scale * canvas.height;
+      console.log(imageWidth, imageHeight)
+      var dx = canvas.width/2 - imageWidth/2;
+      var dy = canvas.height/2 - imageHeight/2;
+
+      context.clearRect(0,0, canvas.width, canvas.height);
+      // drawImage(img, dx, dy)
+      context.drawImage(image, dx, dy, imageWidth, imageHeight);
+      // drawImage(img, dx, dy, dw, dh)
+      // drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh)
+    }
+  </script>
 </body>
 </html>
