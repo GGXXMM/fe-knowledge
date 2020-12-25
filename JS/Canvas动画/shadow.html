@@ -11,14 +11,34 @@
     var canvas = document.getElementById('canvas');
     var ctx = canvas.getContext('2d');
 
-    // 阴影
-    ctx.shadowBlur = 10;// 阴影的模糊级别
-    ctx.shadowOffsetX = 10;// 阴影距形状的水平距离
-    ctx.shadowOffsetY = 5;// 阴影距形状的垂直距离
-    ctx.shadowColor = "black";// 阴影颜色
+    /* 阴影 */
+    // ctx.shadowBlur = 10;// 阴影的模糊级别
+    // ctx.shadowOffsetX = 10;// 阴影距形状的水平距离
+    // ctx.shadowOffsetY = 5;// 阴影距形状的垂直距离
+    // ctx.shadowColor = "black";// 阴影颜色
     ctx.fillStyle = "blue";
     
+    /* globalAlpha透明度和globalCompositeOperation */
+    // ctx.globalAlpha = 0.5;// 调节透明度
+    
     ctx.fillRect(20,20,100,50);
+    /*
+    * globalCompositeOperation属性值
+    * source-over 默认值。在目标图像（已有）上显示源图像（新的）
+    * source-atop 在目标图像顶部显示源图像。源图像位于目标图像之外的部分是不可见的
+    * source-in 在目标图像中显示源图像。只有目标图像内的源图像部分会显示，目标图像是透明的
+    * source-out 在目标图像之外显示源图像。只会显示目标图像之外源图像部分，目标图像是透明的
+    * destination-over 在源图像上方显示目标图像
+    * destination-atop 在源图像顶部显示目标图像。源图像之外的目标图像部分不会被显示
+    * destination-in 在源图像中显示目标图像。只有源图像内的目标图像部分会被显示，源图像是透明的
+    * destination-out	在源图像外显示目标图像。只有源图像外的目标图像部分会被显示，源图像是透明的
+    * lighter 显示源图像 + 目标图像
+    * copy 显示源图像。忽略目标图像
+    * xor 使用异或操作对源图像与目标图像进行组合
+    */
+    ctx.globalCompositeOperation="source-over";
+    ctx.fillStyle="red";
+    ctx.fillRect(50,50,100,50);
   </script>
 </body>
 </html>
