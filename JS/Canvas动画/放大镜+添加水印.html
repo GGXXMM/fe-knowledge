@@ -8,41 +8,127 @@
 <body style="background: black;">
   <canvas id="canvas" width="1152" height="768" style="display:block;margin:0 auto;border: 1px solid #ddd;"></canvas>
   <!-- 离屏canvas -->
-  <canvas id="watemark-canvas" style="display: none;"></canvas>
-  <input type="range" min="0.5" max="3" value="0.5" step="0.01" id="scale-range" style="display:block;margin: 20px auto;">
+  <canvas id="offCanvas" style="display: none;"></canvas>
+  <!-- <input type="range" min="0.5" max="3" value="1" step="0.01" id="scale-range" style="display:block;margin: 20px auto;"> -->
   <script>
     var canvas = document.getElementById('canvas');
     var context = canvas.getContext('2d');
 
-    var watemarkCanvas = document.getElementById('watemark-canvas');
-    var watemarkContext = watemarkCanvas.getContext('2d');
+    var offCanvas = document.getElementById('offCanvas');
+    var offContext = offCanvas.getContext('2d');
 
     var slider = document.getElementById('scale-range');
     
     var image = new Image();
+    var isMouseDown = false;
+    var scale;
+
     window.onload = function() {
       canvas.width = 1152;
       canvas.height = 768;
       
-      var scale = slider.value;
-      image.src = './img.jpg';
+      // var scale = slider.value;
+      image.src = './img-lg.jpg';
       image.onload = function() {
-        drawImageByScale(scale)
-      }
-      slider.onmousemove = function() {
-        scale = slider.value;
-        drawImageByScale(scale)
+        offCanvas.width = image.width;
+        offCanvas.height = image.height;
+        scale = offCanvas.width / canvas.width;
+
+        context.drawImage( image , 0 , 0 , canvas.width , canvas.height );
+        offContext.drawImage( image , 0 , 0 );
+
+        // drawImageByScale(scale)
       }
 
+      // slider.onmousemove = function() {
+      //   scale = slider.value;
+      //   drawImageByScale(scale)
+      // }
+
       // 水印
-      watemarkCanvas.width = 300;
-      watemarkCanvas.height = 100;
-      watemarkContext.font = 'bold 30px serif';
-      watemarkContext.textBaseline = 'middle';
-      watemarkContext.fillStyle = 'rgba(255,255,255,0.5)';
-      watemarkContext.fillText('xinming', 20, 50);
+      // offCanvas.width = 300;
+      // offCanvas.height = 100;
+      // offContext.font = 'bold 30px serif';
+      // offContext.textBaseline = 'middle';
+      // offContext.fillStyle = 'rgba(255,255,255,0.5)';
+      // offContext.fillText('xinming', 20, 50);
     }
-    
+
+    canvas.onmousedown = function(e) {
+      e.preventDefault();
+      isMouseDown = true;
+      var point = windowToCanvas(e.clientX, e.clientY);
+      drawCanvasWithMagnifier(true, point);
+    }
+
+    canvas.onmousemove = function(e) {
+      e.preventDefault();
+      if(isMouseDown) {
+        var point = windowToCanvas(e.clientX, e.clientY)
+        console.log(point.x, point.y)
+        drawCanvasWithMagnifier(true, point);
+      }
+    }
+
+    canvas.onmouseup = function(e) {
+      e.preventDefault();
+      isMouseDown = false;
+      drawCanvasWithMagnifier(false);
+    }
+
+    canvas.onmouseout = function(e) {
+      e.preventDefault();
+      isMouseDown = false;
+      drawCanvasWithMagnifier(false);
+    }
+
+    function windowToCanvas(x, y) {
+      var bbox = canvas.getBoundingClientRect();
+      return { x: x - bbox.left, y: y - bbox.top }
+    }
+
+    /**
+     * @description: 图片带放大镜效果绘制
+     * @param {*} isShowMagnifier 是否显示放大镜
+     * @param {*} point
+     * @return {*}
+     */
+    function drawCanvasWithMagnifier(isShowMagnifier, point) {
+      context.clearRect( 0 , 0 , canvas.width , canvas.height )
+      context.drawImage( image , 0 , 0 , canvas.width , canvas.height )
+      if(isShowMagnifier) {
+        drawMagnifier(point)
+      }
+    }
+    function drawMagnifier(point) {
+      var mr = 200;
+      var imageLG_cx = point.x * scale;
+      var imageLG_cy = point.y * scale;
+      // source位置
+      var sx = imageLG_cx - mr;
+      var sy = imageLG_cy - mr;
+      // 目标位置
+      var dx = point.x - mr;
+      var dy = point.y - mr;
+
+      context.save()
+
+      context.lineWidth = 5;
+      context.strokeStyle = "#fff";
+      context.beginPath();
+      context.arc( point.x , point.y , mr , 0 , Math.PI*2, false);
+      context.stroke();
+      context.clip();
+      context.drawImage(offCanvas, sx, sy, 2*mr, 2*mr, dx, dy, 2*mr , 2*mr);
+      
+      context.restore();
+    }
+
+    /**
+     * @description: 图片缩放绘制
+     * @param {*} scale 缩放比例
+     * @return {*}
+     */
     function drawImageByScale(scale) {
       var imageWidth = scale * canvas.width;
       var imageHeight = scale * canvas.height;
@@ -56,8 +142,9 @@
       // drawImage(img, dx, dy, dw, dh)
       // drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh)
 
-      context.drawImage(watemarkCanvas, canvas.width - watemarkCanvas.width, canvas.height-watemarkCanvas.height)
+      context.drawImage(offCanvas, canvas.width - offCanvas.width, canvas.height-offCanvas.height)
     }
+
   </script>
 </body>
 </html>
