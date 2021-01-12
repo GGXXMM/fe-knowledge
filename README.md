@@ -55,7 +55,7 @@
 15. [JavaScript模拟实现js函数柯里化](https://github.com/GGXXMM/FE-Knowledge/issues/15)
 16. [手写防抖和节流](https://github.com/GGXXMM/FE-Knowledge/issues/16)
 17. [手写js浅拷贝和深拷贝](https://github.com/GGXXMM/FE-Knowledge/issues/17)
-18. [js动画]()
+18. [js动画](https://github.com/GGXXMM/FE-Knowledge/issues/69)
 
 ## 四、ES6
 1. [ES6 之 let 和 const](https://github.com/mqyqingfeng/Blog/issues/82)
@@ -104,16 +104,16 @@
 20. [为什么Vuex的mutation中不能做异步操作？](https://github.com/GGXXMM/FE-Knowledge/issues/42)
 21. [vue-router中如何保护指定路由的安全？](https://github.com/GGXXMM/FE-Knowledge/issues/79)
 22. [nextTick是干什么的？实现原理是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/80)
+23. [vue插槽是如何运作的?](https://github.com/GGXXMM/FE-Knowledge/issues/82)
 
 ## 六、工具
 ### webpack
-1. [webpack基本功能]()
-2. [webpack基本配置？构建过程？]()
-3. [使用过webpack哪些loader和plugin？]()
-4. [webpack打包原理]()
-5. [介绍下webpack-dev-server]()
-6. [介绍下webpack热更新原理，是如何做到在不刷新浏览器的前提下更新页面的？]()
-7. [webpack打包vue速度太慢怎么办？]()
+1. [为什么需要构建工具？为什么选择webpack？](https://github.com/GGXXMM/FE-Knowledge/issues/83)
+2. [webpack基本配置？构建过程？](https://github.com/GGXXMM/FE-Knowledge/issues/84)
+3. [webpack的热更新使用及原理分析（是如何做到在不刷新浏览器的前提下更新页面的）](https://github.com/GGXXMM/FE-Knowledge/issues/85)
+4. [webpack的性能优化](https://github.com/GGXXMM/FE-Knowledge/issues/86)
+5. [webpack工作原理](https://github.com/GGXXMM/FE-Knowledge/issues/87)
+6. [Tapable插件架构与Hooks设计](https://github.com/GGXXMM/FE-Knowledge/issues/88)
 
 ### babel
 1. [Babel的原理是什么？]()
