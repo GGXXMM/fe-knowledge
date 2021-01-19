@@ -47,15 +47,17 @@
 7. [JavaScript创建对象的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/7)
 8. [JavaScript实现继承的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/8)
 9. [JavaScript数组去重的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/9)
-10. [JavaScript模拟实现new操作符](https://github.com/GGXXMM/FE-Knowledge/issues/10)
-11. [JavaScript模拟实现JSON.stringify](https://github.com/GGXXMM/FE-Knowledge/issues/11)
-12. [JavaScript模拟实现JSON.parse](https://github.com/GGXXMM/FE-Knowledge/issues/12)
-13. [JavaScript模拟实现instanceOf](https://github.com/GGXXMM/FE-Knowledge/issues/13)
-14. [JavaScript模拟实现call、apply、bind](https://github.com/GGXXMM/FE-Knowledge/issues/14)
-15. [JavaScript模拟实现js函数柯里化](https://github.com/GGXXMM/FE-Knowledge/issues/15)
-16. [手写防抖和节流](https://github.com/GGXXMM/FE-Knowledge/issues/16)
-17. [手写js浅拷贝和深拷贝](https://github.com/GGXXMM/FE-Knowledge/issues/17)
-18. [js动画](https://github.com/GGXXMM/FE-Knowledge/issues/69)
+10. [JavaScript数组扁平化](https://github.com/GGXXMM/FE-Knowledge/issues/89)
+11. [JavaScript模拟实现new操作符](https://github.com/GGXXMM/FE-Knowledge/issues/10)
+12. [JavaScript模拟实现JSON.stringify](https://github.com/GGXXMM/FE-Knowledge/issues/11)
+13. [JavaScript模拟实现JSON.parse](https://github.com/GGXXMM/FE-Knowledge/issues/12)
+14. [JavaScript模拟实现instanceOf](https://github.com/GGXXMM/FE-Knowledge/issues/13)
+15. [JavaScript模拟实现call、apply、bind](https://github.com/GGXXMM/FE-Knowledge/issues/14)
+16. [JavaScript模拟实现函数柯里化](https://github.com/GGXXMM/FE-Knowledge/issues/15)
+17. [JavaScript实现浅拷贝和深拷贝](https://github.com/GGXXMM/FE-Knowledge/issues/17)
+18. [JavaScript实现发布订阅模式](https://github.com/GGXXMM/FE-Knowledge/issues/90)
+19. [手写防抖和节流](https://github.com/GGXXMM/FE-Knowledge/issues/16)
+20. [js动画](https://github.com/GGXXMM/FE-Knowledge/issues/69)
 
 ## 四、ES6
 1. [ES6 之 let 和 const](https://github.com/mqyqingfeng/Blog/issues/82)
@@ -79,6 +81,7 @@
 19. [ES6 之 私有变量的实现](https://github.com/mqyqingfeng/Blog/issues/110)
 20. [ES6 完全使用手册](https://github.com/mqyqingfeng/Blog/issues/111)
 21. [手写一个Promise](https://github.com/GGXXMM/FE-Knowledge/issues/61)
+22. [手写async/await](https://github.com/GGXXMM/FE-Knowledge/issues/91)
 
 ## 五、框架
 ### Vue
@@ -105,6 +108,8 @@
 21. [vue-router中如何保护指定路由的安全？](https://github.com/GGXXMM/FE-Knowledge/issues/79)
 22. [nextTick是干什么的？实现原理是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/80)
 23. [vue插槽是如何运作的?](https://github.com/GGXXMM/FE-Knowledge/issues/82)
+24. [手写vue的双向绑定](https://github.com/GGXXMM/FE-Knowledge/issues/92)
+25. [手写axios](https://github.com/GGXXMM/FE-Knowledge/issues/93)
 
 ## 六、工具
 ### webpack
