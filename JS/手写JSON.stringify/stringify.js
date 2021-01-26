@@ -30,5 +30,7 @@ function stringify(data) {
       }
       return '{'+tmp.join()+'}';
     }
+  }else if(type === 'function' || type=== 'undefined' || type === 'symbol') {
+    return undefined;
   }
 }
