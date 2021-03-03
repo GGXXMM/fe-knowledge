@@ -107,9 +107,10 @@
 20. [为什么Vuex的mutation中不能做异步操作？](https://github.com/GGXXMM/FE-Knowledge/issues/42)
 21. [vue-router中如何保护指定路由的安全？](https://github.com/GGXXMM/FE-Knowledge/issues/79)
 22. [nextTick是干什么的？实现原理是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/80)
-23. [vue插槽是如何运作的?](https://github.com/GGXXMM/FE-Knowledge/issues/82)
-24. [手写vue的双向绑定](https://github.com/GGXXMM/FE-Knowledge/issues/92)
-25. [手写axios](https://github.com/GGXXMM/FE-Knowledge/issues/93)
+23. [keep-alive缓存的机制](https://github.com/GGXXMM/FE-Knowledge/issues/94)
+24. [vue插槽是如何运作的?](https://github.com/GGXXMM/FE-Knowledge/issues/82)
+25. [手写vue的双向绑定](https://github.com/GGXXMM/FE-Knowledge/issues/92)
+26. [手写axios](https://github.com/GGXXMM/FE-Knowledge/issues/93)
 
 ## 六、工具
 ### webpack
@@ -121,11 +122,11 @@
 6. [Tapable插件架构与Hooks设计](https://github.com/GGXXMM/FE-Knowledge/issues/88)
 
 ### babel
-1. [Babel的原理是什么？]()
+1. [Babel的原理是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/95)
 
 ### git
-1. [git的工作流程]()
-2. [git版本回退reset和revert的区别？]()
+1. [git的工作流程](https://github.com/GGXXMM/FE-Knowledge/issues/96)
+2. [git reset、git revert 和 git checkout的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/97)
 
 ## 七、性能优化
 1. [性能优化之加载篇]()
