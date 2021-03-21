@@ -1,0 +1,15 @@
+:root {
+  --bg-color: red;
+  --font: 30px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: var(--bg-color);
+}
+
+/* 自定义属性的继承性 */
+.one {
+  font-size: var(--font);
+}
