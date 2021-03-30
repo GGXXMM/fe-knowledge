@@ -109,7 +109,7 @@
 22. [nextTick是干什么的？实现原理是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/80)
 23. [keep-alive缓存的机制](https://github.com/GGXXMM/FE-Knowledge/issues/94)
 24. [vue插槽是如何运作的?](https://github.com/GGXXMM/FE-Knowledge/issues/82)
-25. [手写实现EventBus](https://github.com/GGXXMM/FE-Knowledge/Vue/手写EventBus)
+25. [手写实现EventBus](https://github.com/GGXXMM/FE-Knowledge/tree/master/Vue/%E6%89%8B%E5%86%99EventBus)
 25. [手写vue的双向绑定](https://github.com/GGXXMM/FE-Knowledge/issues/92)
 26. [手写axios](https://github.com/GGXXMM/FE-Knowledge/issues/93)
 
