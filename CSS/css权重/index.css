@@ -1,0 +1,16 @@
+/* class权重 = 属性权重 = 10 */
+.box1 {
+  color: red;
+}
+
+p[title] {
+  color: blue;
+}
+
+/* class权重 = 伪类权重 = 10 */
+#box2 .a{
+  color: black;
+}
+#box2 a:hover {
+  color: pink;
+}
