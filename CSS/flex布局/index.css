@@ -1,0 +1,60 @@
+/* 父容器属性 */
+.container {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  /* flex-flow: row wrap;
+  -webkit-align-content: stretch;
+  align-content: stretch; */
+}
+.item {
+  /* flex: 1; */
+}
+.item:nth-child(odd) {
+  background: yellow;
+}
+.item:nth-child(even) {
+  background: pink;
+}
+
+/* item子元素属性 */
+/* order */
+.yellowItem {
+  order: 2;
+  background: yellow;
+}
+.pinkItem {
+  order: 1;
+  background: pink;
+}
+.redItem {
+  background: red;
+}
+.blueItem {
+  background: blue;
+}
+
+/* flex-grow */
+/* .item:nth-child(1) {
+  flex-grow: 3;
+} */
+
+/* flex-shrink + flex-basis */
+.item{
+  flex-basis: 120px;
+}
+.item:nth-child(1) {
+  flex-shrink: 1;
+}
+.item:nth-child(2) {
+  flex-shrink: 1;
+}
+.item:nth-child(3) {
+  flex-shrink: 1;
+}
+.item:nth-child(4) {
+  flex-shrink: 2;
+}
+.item:nth-child(5) {
+  flex-shrink: 2;
+}

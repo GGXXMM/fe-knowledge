@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    hello
+  </div>
+  <script>
+    // 模拟vue中的data, 多个响应式数据
+    let data = {
+      msg: 'hello',
+      count: 1
+    }
+
+    // 模拟vue实例
+    let vm = {}
+    proxyData(data)
+
+    function proxyData(data) {
+      // 遍历data对象的所有属性
+      Object.keys(data).forEach(key => {
+        // 把data上的属性挂载到vm，并转换getter/setter
+        Object.defineProperty(vm, key, {
+          // 可枚举(可遍历)
+          enumerable: true,
+          // 可配置(可delete删除，也可以通过 defineProperty重新定义)
+          configurable: true,
+          get() {
+            console.log('get：', data[key])
+            return data[key]
+          },
+          set(newVal) {
+            console.log('set：', newVal)
+            if(newVal === data[key]) {
+              return
+            }
+            data[key] = newVal
+            // 数据更新
+            document.getElementById('app').textContent = data[key]
+          }
+        })
+      })
+    }
+
+    vm.msg = 'hello world';
+    console.log(vm.msg)
+  </script>
+</body>
+</html>
