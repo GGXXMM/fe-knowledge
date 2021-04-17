@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proxy</title>
+</head>
+<body>
+  <div id="app">
+    hello
+  </div>
+  <script>
+    // 模拟vue中的data, 多个响应式数据
+    let data = {
+      msg: 'hello',
+      count: 1
+    }
+    // 模拟vue实例，proxy代理data对象
+    let vm = new Proxy(data, {
+      get: function(target, key) { 
+        console.log('get：', target[key])
+        return target[key]
+      },
+      set: function(target, key, newVal) {
+        console.log('set：', newVal)
+        if(newVal == target[key]) {
+          return
+        }
+        target[key] = newVal
+        // 数据更新
+        document.getElementById('app').textContent = target[key]
+      }
+    })
+
+    vm.msg = 'hello world';
+    console.log(vm.msg)
+  </script>
+</body>
+</html>
