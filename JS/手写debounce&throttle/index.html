@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>防抖与节流</title>
+</head>
+<body>
+  <button id="debounce">防抖</button>
+  <button id="throttle">节流</button>
+  <script src="./debounce.js"></script>
+  <script src="./throttle.js"></script>
+  <script>
+    // 防抖
+    var btn1 = document.getElementById('debounce');
+    function realFunc1(){
+      console.log("防抖成功");
+    }
+    btn1.addEventListener('click', debounce(realFunc1, 1000));// 鼠标每次点击限制1s后执行
+
+    // 节流
+    var btn2 = document.getElementById('throttle');
+    function realFunc2(){
+      console.log("节流成功");
+    }
+    btn2.addEventListener('click', throttle(realFunc2, 2000));// 鼠标不管点击多少次，2s内执行1次，其余不执行
+  </script>
+</body>
+</html>
