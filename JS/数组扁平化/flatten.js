@@ -75,3 +75,6 @@ function flatten(input, shallow, strict, output){
 }
 
 console.log(flatten(arr)); // [1,2,3,4,5]
+
+// 6. es6的flat方法
+arr.flat(Infinity);
