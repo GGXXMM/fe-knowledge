@@ -38,8 +38,8 @@
 17. [如何解决移动端Retina屏1px像素的问题？](https://github.com/GGXXMM/FE-Knowledge/issues/68)
 
 ## 三、JavaScript
-1. [JavaScript的原型与原型链](https://github.com/GGXXMM/Blog-Knowledge/issues/1)
-2. [JavaScript的执行上下文与执行上下文栈](https://github.com/GGXXMM/Blog-Knowledge/issues/2)
+1. [JavaScript的原型与原型链](https://github.com/GGXXMM/FE-Knowledge/issues/1)
+2. [JavaScript的执行上下文与执行上下文栈](https://github.com/GGXXMM/FE-Knowledge/issues/2)
 3. [JavaScript的作用域与作用域链](https://github.com/GGXXMM/FE-Knowledge/issues/3)
 4. [JavaScript的this](https://github.com/GGXXMM/FE-Knowledge/issues/4)
 5. [JavaScript的闭包](https://github.com/GGXXMM/FE-Knowledge/issues/5)
