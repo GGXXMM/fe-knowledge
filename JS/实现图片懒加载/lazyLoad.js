@@ -1,5 +1,5 @@
-const imgList = [...document.querySelectorAll('img')];
-const len = imgList.length;
+let imgList = [...document.querySelectorAll('img')];
+let len = imgList.length;
 
 const lazyLoad = (function(){
   let count = 0;
@@ -31,6 +31,6 @@ const throttle = function(fn, timing = 500) {
     }
   }
 }
-// 滚动加上节流控制
+// 滚动监听加上节流控制
 const _throttle = throttle(lazyLoad)
 document.addEventListener('scroll', _throttle)
