@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+    }
+    img{
+      margin-top: 100px;
+      background-size: cover;
+      background-position: center;
+      width: 952px;
+      height: 595px;
+    }
+    .lazy-image {
+      background: url('./img/loading.gif') no-repeat center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img data-src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1301/05/c0/17135331_1357355776882.jpg" class="lazy-image"/>
+    <img data-src="http://f.hiphotos.baidu.com/zhidao/pic/item/eac4b74543a982267a3d54978a82b9014b90eb86.jpg" class="lazy-image"/>
+    <img data-src="http://pic1.win4000.com/wallpaper/2/58b61f7dc6c1d.jpg" class="lazy-image"/>
+    <img data-src="http://file03.16sucai.com/2017/1100/16sucai_p20161106032_0c2.JPG" class="lazy-image"/>
+    <img data-src="http://imgsrc.baidu.com/image/c0%3Dpixel_huitu%2C0%2C0%2C294%2C40/sign=5a7938d38acb39dbd5cd6f16b96e6c48/aec379310a55b3196c79de4c48a98226cffc1702.jpg" class="lazy-image"/>
+    <img data-src="http://c.hiphotos.baidu.com/zhidao/pic/item/8d5494eef01f3a2987a8062f9f25bc315d607ceb.jpg" class="lazy-image"/>
+  </div>
+  <script src="./lazyLoad.js"></script>
+</body>
+</html>
