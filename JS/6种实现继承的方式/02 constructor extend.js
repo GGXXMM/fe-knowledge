@@ -13,5 +13,5 @@ function Child() {
 
 var instance = new Child();
 // 只能继承父类属性，父类原型上的属性方法无法继承
-console.log(instance.name)
-console.log(instance.getName())
+console.log(instance.name)// 'parent'
+console.log(instance.getName()) // TypeError: instance.getName is not a function
