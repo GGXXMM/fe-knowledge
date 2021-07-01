@@ -74,7 +74,15 @@ function flatten(input, shallow, strict, output){
   return output;
 }
 
-console.log(flatten(arr)); // [1,2,3,4,5]
-
 // 6. es6的flat方法
 arr.flat(Infinity);
+
+// 7. 正则和JSON方法处理
+function flatten(arr) {
+  var str = JSON.stringify(arr);
+  str = str.replace(/(\[|\])/g, '');
+  str = '['+str+']';
+  return JSON.parse(str);
+}
+
+console.log(flatten(arr)); // [1,2,3,4,5]
