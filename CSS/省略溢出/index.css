@@ -1,0 +1,17 @@
+/* css */
+.container {
+  width: 300px;
+}
+.left {
+  background: yellow;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  direction: rtl;
+}
+.right {
+  background: pink;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
