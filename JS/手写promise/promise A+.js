@@ -169,7 +169,7 @@ Promise.all = function(items) {
     let len = items.length;
     for (let i = 0; i < len; i++) {
       items[i].then(function(data){
-        res[i]=data
+        res[i]=data;
         if (++num === len) {
           resolve(res);
         }
@@ -178,6 +178,15 @@ Promise.all = function(items) {
   })
 }
 
+/**
+ * Promise.race
+ * 1. 将多个Promise（p1,p2,p3...) 实例，包装成一个新的Promise (p) 返回
+ * 2. p1,p2,p3... 哪个执行快，就返回哪个，无论成功/失败
+ */
 Promise.race = function(items) {
-
+  return new Promise((resolve, reject)=>{
+    for (let i = 0; i < items.length; i++) {
+      items[i].then(resolve, reject);
+    }
+  })
 }
