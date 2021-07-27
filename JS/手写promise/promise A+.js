@@ -18,7 +18,7 @@ function Promise(fn) {
   function resolve(value) {
     setTimeout(()=> {
       if (self.status === 'pending') {
-        self.status = 'resolved'
+        self.status = 'fulfilled'
         self.data = value
         for(var i = 0; i < self.onResolvedCallback.length; i++) {
           self.onResolvedCallback[i](value)
@@ -154,4 +154,30 @@ Promise.prototype.then = function(onResolved, onRejected) {
 Promise.prototype.catch = function(onRejected) {
   // 实质调用then函数
   return this.then(null, onRejected)
+}
+
+/**
+ * Promise.all
+ * 1. 将多个Promise（p1,p2,p3...) 实例，包装成一个新的Promise (p) 返回
+ * 2. p的状态由 p1、p2、p3... 决定，只有都成功，状态才为 fulfilled，返回成功值组成的数组
+ * 3. p1、p2、p3... 其中之一返回失败，p 的状态就为失败，第 1 个失败原因作为返回值
+ */
+Promise.all = function(items) {
+  return new Promise((resolve, reject)=> {
+    let res = [];
+    let num = 0;  // 记录都返回成功的数字
+    let len = items.length;
+    for (let i = 0; i < len; i++) {
+      items[i].then(function(data){
+        res[i]=data
+        if (++num === len) {
+          resolve(res);
+        }
+      }, reject)
+    }
+  })
+}
+
+Promise.race = function(items) {
+
 }
