@@ -20,3 +20,9 @@ window.addEventListener('unhandledrejection', function(error){
   console.log('promise error', error)
 })
 
+// 4、捕获Vue错误，直接扔出给onerror处理
+Vue.config.errorHandler = function (err) {
+  setTimeout(() => {
+    throw err
+  })
+}
