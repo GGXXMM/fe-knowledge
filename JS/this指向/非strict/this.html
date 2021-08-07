@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this指向</title>
+</head>
+<body>
+  <script>
+    // 1、全局上下文
+    console.log(this);// window
+    
+    // 2、函数上下文
+    function fn1() {
+      console.log(this)// window
+    }
+    // 2.1 直接调用
+    fn1()
+    // 2.2 对象调用
+    let obj1 = {
+      a: 1,
+      fn1
+    };
+    obj1.fn1();// this指向obj1
+    // 2.3 new
+    function Student(name){
+      this.name = name;
+      console.log(this); // {name: '若川'}
+    }
+    var result = new Student('若川');
+    // 2.4 箭头函数
+    var name = 'window'; 
+    var obj2 = {
+      name: 'A',
+      sayHello: () => {
+          console.log(this.name)
+      }
+    }
+    obj2.sayHello();// winddow
+
+    // 3、改变上下文
+    function foo() {
+      console.log(this.a);  // 输出 1
+      bar.apply({a: 2}, arguments);
+    }
+    function bar(b) {
+      console.log(this.a + b);  // 输出 5，this指向{a: 2}
+    }
+    var a = 1;
+    foo(3);
+
+    // 4、类
+    class Box{
+      constructor(){
+          this.num=3;
+      }
+      play(){
+        console.log(this===obj4);
+      }
+    }
+    let obj4 = new Box();
+    obj4.play();
+  </script>
+</body>
+</html>
