@@ -1,15 +1,20 @@
-// SyntaxError语法错误
+/* SyntaxError语法错误 */
 // const str = 'zhangsan';
 // const str = false;
 
-// TypeError类型错误
+/* TypeError类型错误 */
 // const str = 'zhangsan';
 // str = false;
+// null/undefined当做数组遍历
+// var arr;
+// arr = arr.map(item => {
+//   return +item;
+// });
 
-// ReferenceError引用错误
+/* ReferenceError引用错误 */
 // obj.getName();
 
-// RangeError
+/* RangeError */
 // function check(n){
 //   if( !(n >= -500 && n <= 500) )
 //   {
@@ -25,7 +30,7 @@
 //   }
 // }
 
-// 异步错误
+/* 异步错误 */
 // try {
 //   setTimeout(() => {
 //     error        // 异步错误
@@ -34,7 +39,7 @@
 //   console.log('我感知不到错误');
 // }
 
-// Promise错误
+/* Promise错误 */
 new Promise((resolve, reject) => {
   reject('promise error');
 });
