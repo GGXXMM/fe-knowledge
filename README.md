@@ -141,7 +141,7 @@
 1. [性能优化之加载篇]()
 2. [性能优化之执行篇]()
 
-## 八、网络、安全
+## 八、网络
 1. [浏览器输入url到页面展示的全过程(综合)](https://github.com/GGXXMM/FE-Knowledge/issues/18)
 2. [什么是DNS？DNS查询方式？DNS解析的详细过程？](https://github.com/GGXXMM/FE-Knowledge/issues/19)
 3. [TCP三次握手和四次挥手](https://github.com/GGXXMM/FE-Knowledge/issues/20)
@@ -150,10 +150,12 @@
 6. [HTTP常见状态码](https://github.com/GGXXMM/FE-Knowledge/issues/23)
 7. [HTTP请求方式（8种），get和post请求区别？](https://github.com/GGXXMM/FE-Knowledge/issues/24)
 8. [图解HTTPS](https://github.com/GGXXMM/FE-Knowledge/issues/25)
-9. [XSS攻击？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/26)
-10. [CSRF攻击？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/27)
-11. [SQL注入？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/28)
-12. [命令行注入？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/29)
-13. [服务器漏洞？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/30)
-15. [流量劫持（DNS劫持、HTTP劫持）？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/31)
-16. [HTTPS中间人攻击？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/32)
+
+# 九、安全
+1. [XSS攻击？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/26)
+2. [CSRF攻击？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/27)
+3. [SQL注入？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/28)
+4. [命令行注入？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/29)
+5. [服务器漏洞？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/30)
+6. [流量劫持（DNS劫持、HTTP劫持）？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/31)
+7. [HTTPS中间人攻击？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/32)
