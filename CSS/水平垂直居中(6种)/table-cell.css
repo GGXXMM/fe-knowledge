@@ -1,10 +1,9 @@
 .container {
   display: table-cell;
   vertical-align: middle;/* 垂直居中 */
+  width: 100px;
   height: 400px;
 }
 .inner {
   background: pink;
-  width: 200px;
-  height: 200px;
 }
