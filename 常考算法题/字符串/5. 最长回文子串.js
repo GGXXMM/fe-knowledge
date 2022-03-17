@@ -10,32 +10,32 @@
  * @return {string}
  */ 
 // 1、暴力法：时间复杂度：O(n^3)，空间复杂度：O(1)
-var longestPalindrome = function(s) {
-  let maxStr = '', max = 0;
-  const len = s.length;
-  if(len == 0) return '';
-  if(len == 1) return s;
-  for(let i = 0;i<len;i++) {
-    for(let j = i+1;j<=len;j++) {
-      let tmpStr = s.substring(i, j)
-      if(isPalindrome(tmpStr) && tmpStr.length > max) {
-        maxStr = tmpStr;
-        max = maxStr.length;
-      }
-    }
-  }
-  return maxStr;
-}
-function isPalindrome(str) {
-  let len = str.length;
-  let mid = parseInt(len/2);
-  for(let i = 0;i<mid;i++) {
-    if(str[i] != str[len-i-1]){
-      return false;
-    }
-  }
-  return true;
-}
+// var longestPalindrome = function(s) {
+//   let maxStr = '', max = 0;
+//   const len = s.length;
+//   if(len == 0) return '';
+//   if(len == 1) return s;
+//   for(let i = 0;i<len;i++) {
+//     for(let j = i+1;j<=len;j++) {
+//       let tmpStr = s.substring(i, j)
+//       if(isPalindrome(tmpStr) && tmpStr.length > max) {
+//         maxStr = tmpStr;
+//         max = maxStr.length;
+//       }
+//     }
+//   }
+//   return maxStr;
+// }
+// function isPalindrome(str) {
+//   let len = str.length;
+//   let mid = parseInt(len/2);
+//   for(let i = 0;i<mid;i++) {
+//     if(str[i] != str[len-i-1]){
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
 // 2、动态规划：时间复杂度：O(n^2)，空间复杂度：O(n^2)
 // var longestPalindrome = function(s) {
@@ -85,44 +85,45 @@ function isPalindrome(str) {
 //   return s.substring(start,end+1);
 // };
 
-// 4、Manacher 算法：时间复杂度：O(n)，空间复杂度：O(n)
-// var longestPalindrome = function(s) {
-//   if(!s || s.length < 2){
-//       return s;
-//   }
+// 4、Manacher算法（马拉车算法）：时间复杂度：O(n)，空间复杂度：O(n)
+var longestPalindrome = function(s) {
+  if(!s || s.length < 2){
+      return s;
+  }
+  var s_f = '#'+s.split('').join('#')+'#';
+  let c = 0,R = 0;
+  var t_len = s_f.length;
+  var maxLen = 0;
+  var maxIndex = 0;
+  var originIndex = 0;
+  var p = new Array(t_len);
+  p[0] = 0;
+  for(var i = 1;i<t_len-1;i++){
+      var j = 2*c-i;
+      if(i<R){
+          p[i] = Math.min(p[j],R-i)
+      }else{
+          p[i] = 0;
+      }
+      var left = i-p[i]-1;
+      var right = i+p[i]+1;
+      while(left>=0 && right<t_len && s_f[left]==s_f[right]){
+          left--;
+          right++;
+          p[i]++;
+      }
+      if(i+p[i]>R){
+          c = i;
+          R = i+p[i];
+      }
+      if(p[i]>maxLen){
+          maxLen = p[i];
+          maxIndex = i;
+          originIndex = parseInt((i-p[i])/2)
+      }
+  } 
+  return s.substring(originIndex,originIndex + maxLen);
+};
 
-//   let start = 0, end = 0;
-//   let s_f = '#'+s.split('').join('#')+'#';
-//   let t_len = s_f.length;
-//   let arr = new Array(t_len);
-//   let right = 0, j = 0;
-//   for(let i = 0;i < t_len;i++) {
-//     var cur_arm_len;
-//     if(right >= i) {
-//       var i_sym = j*2 - i;
-//       var min_arm_len = Math.min(arr[i_sym], right - i);
-//       cur_arm_len = expand(s_f, i - min_arm_len, i + min_arm_len);
-//     }else{
-//       cur_arm_len = expand(s_f, i, i);
-//     }
-//     arr.push(cur_arm_len);
-//     if(i + cur_arm_len > right) {
-//       j = i;
-//       right = i + cur_arm_len;
-//     }
-//     if(cur_arm_len*2 + 1 > end - start) {
-//       start = i - cur_arm_len;
-//       end = i + cur_arm_len;
-//     }
-//   }
-//   return s.substring(start, end);
-// };
-// function expand(str, left, right) {
-//   while (left >= 0 && right < str.length && str[left] == str[right]) {
-//     --left;
-//     ++right;
-//   }
-//   return (right - left - 2) / 2;
-// }
 // @lc code=end
 
