@@ -4,7 +4,7 @@
  * @param {*} callback(previousValue上一次返回值, currentValue正在处理的元素, currentIndex数组中的索引, array调用方法的数组)
  * @param {*} initalValue 第一次调用callback的初始参数
  */
-Array.prototype.reduce = Array.prototype.reduce || function reduce(callback, initalValue) {
+Array.prototype.reduce = function(callback, initalValue) {
   if(!Array.isArray(this)) throw new TypeError('this is not a array')
   if(typeof callback !== 'function') throw new TypeError(callback + ' is not a function')
 
