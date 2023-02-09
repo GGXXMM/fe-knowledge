@@ -14,11 +14,11 @@ const preLoad = (function(){
     myImage.setSrc( this.src )// this指向img
   }
   return {
-    setSrc: function(src) {
+    setImg: function(src) {
       myImage.setSrc('./img/loading.gif')
       img.src = src
     }
   }
 })()
 
-preLoad.setSrc('./img/bg_gaoqing.jpeg')
+preLoad.setImg('./img/bg_gaoqing.jpeg')
