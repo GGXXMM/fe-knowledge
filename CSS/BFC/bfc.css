@@ -1,0 +1,58 @@
+/* 1、高度塌陷 */
+.root {
+  overflow: hidden; /* 方案一：创建BFC */
+  float: left; /* 方案二：父元素设置浮动 */
+  width: 300px;
+  border: 2px solid blue;
+}
+/* 方案三：父元素内结尾处追加一个空元素，并设置clear:both */
+.root:after {
+  display: block;
+  content: ' ';
+  clear: both;/* 方案四：父元素末尾伪元素设置clear:both（最优） */
+}
+.root .child {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+.root .child1 {
+  background: yellow;
+}
+.root .child2 {
+  background: pink;
+}
+
+/* 2、垂直方向margin合并 */
+/* 方案：用新div包裹下方的元素，并设置overflow: hidden;形成BFC */
+.margin-wrapper {
+  overflow: hidden;
+}
+.root-margin .child {
+  width: 200px;
+  height: 200px;
+}
+.root-margin .child1 {
+  margin-bottom: 20px;
+  background: steelblue;
+}
+.root-margin .child2 {
+  margin-top: 30px;
+  background: violet;
+}
+
+/* 3、自适应两列布局 */
+.root-two-column {
+  margin-top: 50px;
+}
+.child-left {
+  float: left;/* 左列，设置浮动形成一个BFC */
+  width: 200px;
+  height: 500px;
+  background: pink;
+}
+.child-right {
+  overflow: hidden;/* 右列，设置overflow: hidden形成另一个BFC */
+  height: 500px;
+  background: gray;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BFC</title>
+  <style>
+    *,html {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <link rel="stylesheet" href="bfc.css">
+</head>
+<body>
+  <!-- 问题1：高度塌陷 -->
+  <div class="root">
+    <div class="child child1"></div>
+    <div class="child child2"></div>
+  </div>
+
+  <!-- 问题2：垂直方向margin合并 -->
+  <div class="root-margin">
+    <div class="child child1"></div>
+    <div class="margin-wrapper">
+      <div class="child child2"></div>
+    </div>
+  </div>
+
+  <!-- 运用：自适应两列布局 -->
+  <div class="root-two-column">
+    <div class="child child-left"></div>
+    <div class="child child-right"></div>
+  </div>
+</body>
+</html>
