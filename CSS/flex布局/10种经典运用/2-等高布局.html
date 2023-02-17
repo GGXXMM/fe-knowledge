@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>等高布局</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    .container {
+      /* container是flex容器，里面的子项就等高了，自动以最高的子项为准 */
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    .card {
+      flex: 1 1 300px;
+    }
+    .card1 {
+      background: pink;
+    }
+    .card2 {
+      background: gray;
+    }
+    .card3 {
+      background: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card card1">card1</div>
+    <div class="card card2">
+      card2
+      <p>等高，2222222</p>
+    </div>
+    <div class="card card3">card3</div>
+  </div>
+</body>
+</html>

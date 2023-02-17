@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网格布局</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    :root {
+      --gap: 1rem;
+    }
+    flex-container {
+      margin-bottom: 1rem;
+      display: flex;
+      gap: var(--gap)
+    }
+    flex-item {
+      flex: 1;
+      min-width: 0;
+      background-color: turquoise;
+    }
+  </style>
+</head>
+<body>
+  <!-- 3列布局 -->
+  <flex-container>
+    <flex-item> 1 of 3</flex-item>
+    <flex-item> 1 of 3</flex-item>
+    <flex-item> 1 of 3</flex-item>
+  </flex-container>
+  <!-- 6列布局 -->
+  <flex-container>
+    <flex-item> 1 of 6</flex-item>
+    <flex-item> 1 of 6</flex-item>
+    <flex-item> 1 of 6</flex-item>
+    <flex-item> 1 of 6</flex-item>
+    <flex-item> 1 of 6</flex-item>
+    <flex-item> 1 of 6</flex-item>
+  </flex-container>
+  <!-- 12列布局 -->
+</body>
+</html>

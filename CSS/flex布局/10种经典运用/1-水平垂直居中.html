@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水平垂直居中</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    .container {
+      display: flex;
+      height: 200px;
+    }
+    .container--single {
+      /* 主轴：x轴 */
+      justify-content: center;/* 水平居中（主轴方向居中） */
+      align-items: center;/* 垂直居中（交叉轴方向居中） */
+    }
+    .container--multiple {
+      /* 主轴：y轴 */
+      flex-direction: column;
+      justify-content: center;/* 垂直居中 */
+      align-items: center;/* 水平居中 */
+    }
+  </style>
+</head>
+<body>
+  <!-- 单行 -->
+  <div class="container container--single">
+    <p>单行水平垂直居中</p>
+  </div>
+  <!-- 多行 -->
+  <div class="container container--multiple">
+    <h3>多行标题</h3>
+    <p>多行水平垂直居中</p>
+  </div>
+</body>
+</html>

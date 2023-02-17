@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    .container {
+        display: flex;
+        algin-items: center;
+    }
+    .container:nth-child(1) {
+        justify-content: center;
+    }
+
+    .container:nth-child(3) {
+        justify-content: space-between;
+    }
+
+    .container:nth-child(4) .cart{
+        margin-left: auto;
+    } 
+  </style>
+</head>
+<body>
+  <!-- 样式一：导航居中 -->
+  <header class="container">
+      <NavMenu />
+  </header>
+
+  <!-- 样式二：导航左对齐（默认） -->
+  <!-- 样式三：导航两端对齐 -->
+  <header class="container">
+      <Logo />
+      <NavMenu />
+  </header>
+
+  <!-- 样式四：cart右对齐 -->
+  <header class="container">
+      <Logo />
+      <NavMenu />
+      <Cart />
+  </header>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>粘性页脚</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    body > * {
+      padding: 15px;
+      color: #f90;
+      background-color: #fff;
+    }
+    /* header/footer不随浏览器高度改变而收缩 */
+    header {
+      flex-shrink: 0;
+    }
+    main {
+      flex: 1 0 auto;
+      /* 等同于 */
+      flex-grow: 1;/* 当容器有剩余空间，全部都加到main子项 */
+      flex-shrink: 0;/* 当空间不足时，不进行缩小 */
+      flex-basis: auto;/* 项目初始大小，默认auto */
+    }
+    footer {
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sticky Footer</h1>
+  </header>
+  <main>
+    <h2>现代 Web 布局技术</h2>
+    <p>使用 CSS Flexbox 技术构建 Sticky Footer 布局</p>
+  </main>
+  <footer>
+    <p>Sticky Footer布局</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>灵活的弹性框</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    .container {
+      display: flex;
+      height: 500px;
+    }
+    aside {
+      width: 200px;
+      background: yellow;
+    }
+    main {
+      flex: 1 1 0%;
+      min-width: 0;
+      background: greenyellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside></aside>
+    <main></main>
+  </div>
+</body>
+</html>

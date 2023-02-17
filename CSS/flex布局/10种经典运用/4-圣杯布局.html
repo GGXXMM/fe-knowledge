@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>圣杯布局</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    main {
+      display: flex;
+    }
+    article {
+      flex: 1 1 0%;
+      min-width: 0;
+      background: yellow;
+    }
+    aside:nth-of-type(1) {
+      order: -1;
+      min-width: 200px;
+      max-width: 200px;
+      background: greenyellow;
+    }
+    aside:nth-of-type(2) {
+      min-width: 400px;
+      max-width: 400px;
+      background: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h2>现代 Web 布局技术</h2>
+      <p>使用 CSS Flexbox 技术构建圣杯布局（Holy Grail Layout）</p>
+    </article>
+    <aside>
+      <h3>左侧列</h3>
+    </aside>
+    <aside>
+      <h3>右侧列</h3>
+    </aside>
+  </main>
+</body>
+</html>

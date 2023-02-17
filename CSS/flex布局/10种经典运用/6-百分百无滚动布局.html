@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>无滚动布局</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .fixed-container {
+      height: 60px;
+      line-height: 60px;
+      background: yellow;
+    }
+    /* flex子项 */
+    .content-wrapper {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+    }
+    /* 滚动容器 */
+    .overflow-container {
+      flex: 1;
+      overflow-y: auto;
+    }
+    .overflow-content {
+      height: 2000px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="fixed-container">Header：固定尺寸</div>
+    <div class="content-wrapper">
+      <div class="overflow-container">
+        <div class="overflow-content">
+          <p>内容</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

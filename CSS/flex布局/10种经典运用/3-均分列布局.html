@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>均分列布局</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    .container {
+      display: flex;
+    }
+    .item {
+      flex: 1;/* 均等分 */
+      min-width: 0; /* 这行代码很重要：flex容器空间不足时，子项收缩时，其宽度不会小于其内容宽度，所以需要设置min-width */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+  </div>
+</body>
+</html>
