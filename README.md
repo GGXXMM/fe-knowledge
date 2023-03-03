@@ -60,7 +60,7 @@
 20. [JavaScript模拟实现call、apply、bind](https://github.com/GGXXMM/FE-Knowledge/issues/14)
 21. [JavaScript模拟实现compose](./JS/手写compose/compose.js)
 22. [JavaScript实现函数防抖和节流](https://github.com/GGXXMM/FE-Knowledge/issues/16)
-23. [JavaScript实现函数柯里化](https://github.com/GGXXMM/FE-Knowledge/issues/15)
+23. [JavaScript实现函数柯里化和反柯里化](https://github.com/GGXXMM/FE-Knowledge/issues/15)
 24. [JavaScript实现偏函数](https://github.com/GGXXMM/FE-Knowledge/issues/101)
 25. [JavaScript实现浅拷贝和深拷贝](https://github.com/GGXXMM/FE-Knowledge/issues/17)
 26. [JavaScript实现发布订阅模式](https://github.com/GGXXMM/FE-Knowledge/issues/90)
