@@ -97,7 +97,7 @@ function unique(arr) {
 }
 
 /**
- * 6. hasOwnProperty（利用判断对象对象是否存在，较为完美）
+ * 7. hasOwnProperty（利用判断对象对象是否存在，较为完美）
  * 优点：这方法能过滤所有数据类型，并完美地去重
  */
 function unique(arr) {
