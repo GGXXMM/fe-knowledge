@@ -80,12 +80,29 @@ function unique(arr) {
 }
 
 /**
- * 6. hasOwnProperty(较为完美)
+ * 6. 对象属性（错误去重，不建议使用）
+ * 缺点：2个true直接删除了，对NaN和‘NaN’错误去重
+ */
+function unique(arr) {
+	var array = [];
+	var obj = {};
+
+	for (var i = 0; i < arr.length; i++) {
+		if(!obj[arr[i]]) {// 判断是否有当前属性
+			array.push(arr[i]);
+			obj[arr[i]] = true;
+		}
+	}
+	return array;
+}
+
+/**
+ * 6. hasOwnProperty（利用判断对象对象是否存在，较为完美）
  * 优点：这方法能过滤所有数据类型，并完美地去重
  */
 function unique(arr) {
 	var obj = {};
 	return arr.filter(function(item, index, arr) {
-		return obj.hasOwnProperty(typeof item + item) ? false : (obj[typeof item + item] = true)
+		return obj.hasOwnProperty(typeof item) ? false : (obj[typeof item + item] = true)
 	});
 }
