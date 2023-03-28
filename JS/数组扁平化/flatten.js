@@ -1,12 +1,12 @@
 // 1. 递归
 var arr = [1, 2, [3, [4, 5]]];
 function flatten(arr) {
-  var result = [];
-  for (var i = 0; i < arr.length; i++) {
-    if (Array.isArray(arr[i])) {
-      result = result.concat(flatten(arr[i]));
-    } else {
-      result.push(arr[i]);
+  let result = [];
+  for(let val of arr) {
+    if(Array.isArray(val)) {
+      result = result.concat(flatten(val));
+    }else{
+      result.push(val);
     }
   }
   return result;
@@ -75,7 +75,9 @@ function flatten(input, shallow, strict, output){
 }
 
 // 6. es6的flat方法
-arr.flat(Infinity);
+function flatten(arr) {
+  return arr.flat(Infinity);
+}
 
 // 7. 正则和JSON方法处理
 function flatten(arr) {

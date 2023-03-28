@@ -56,7 +56,7 @@
 16. [JavaScript模拟实现Object.assign](https://github.com/GGXXMM/FE-Knowledge/issues/100)
 17. [JavaScript模拟实现JSON.stringify](https://github.com/GGXXMM/FE-Knowledge/issues/11)
 18. [JavaScript模拟实现JSON.parse](https://github.com/GGXXMM/FE-Knowledge/issues/12)
-19. [JavaScript模拟实现instanceOf](https://github.com/GGXXMM/FE-Knowledge/issues/13)
+19. [JavaScript模拟实现instanceof](https://github.com/GGXXMM/FE-Knowledge/issues/13)
 20. [JavaScript模拟实现call、apply、bind](https://github.com/GGXXMM/FE-Knowledge/issues/14)
 21. [JavaScript模拟实现compose](./JS/手写compose/compose.js)
 22. [JavaScript实现函数防抖和节流](https://github.com/GGXXMM/FE-Knowledge/issues/16)
