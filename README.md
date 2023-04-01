@@ -64,6 +64,7 @@
 24. [JavaScript实现偏函数](https://github.com/GGXXMM/FE-Knowledge/issues/101)
 25. [JavaScript实现浅拷贝和深拷贝](https://github.com/GGXXMM/FE-Knowledge/issues/17)
 26. [JavaScript实现发布订阅模式](https://github.com/GGXXMM/FE-Knowledge/issues/90)
+27. [JavaScript实现EventEmitter](https://github.com/GGXXMM/FE-Knowledge/issues/128)
 27. [JavaScript实现图片懒加载](https://github.com/GGXXMM/FE-Knowledge/issues/102)
 28. [JavaScript实现图片预加载](https://github.com/GGXXMM/FE-Knowledge/issues/104)
 29. [js动画](https://github.com/GGXXMM/FE-Knowledge/issues/69)

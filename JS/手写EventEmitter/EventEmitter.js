@@ -1,5 +1,5 @@
 /**
- * 手写简版vue事件总线
+ * 手写简版EventEmitter
  */
 class EventEmitter{
   constructor() {
