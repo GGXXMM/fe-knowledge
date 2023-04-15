@@ -95,7 +95,32 @@
 23. [手写async/await](https://github.com/GGXXMM/FE-Knowledge/issues/91)
 
 ## 五、TS
-1. [Typescript和JavaScript的区别]()
+### 基础类型
+1. [Typescript和JavaScript的区别](https://github.com/GGXXMM/FE-Knowledge/issues/133)
+2. [TS中any和unknown类型区别](https://github.com/GGXXMM/FE-Knowledge/issues/134)
+3. [TS中never和void的区别](https://github.com/GGXXMM/FE-Knowledge/issues/135)
+4. [tsconfig.json有什么作用？](https://github.com/GGXXMM/FE-Knowledge/issues/136)
+### 高级类型
+5. [TS中使用Union Types时有哪些注意事项？](https://github.com/GGXXMM/FE-Knowledge/issues/137)
+6. [TS中keyof、typeof关键字的作用](https://github.com/GGXXMM/FE-Knowledge/issues/138)
+7. [类型别名type和接口interface区别？](https://github.com/GGXXMM/FE-Knowledge/issues/139)
+### 接口
+9. [TS中interface可以给Function/Array/Class(Indexable)做声明吗？](https://github.com/GGXXMM/FE-Knowledge/issues/140)
+10. [TS中同名的interface或者同名的interface和class会合并吗？](https://github.com/GGXXMM/FE-Knowledge/issues/141)
+
+### 类
+11. [TS中的类及其特性](https://github.com/GGXXMM/FE-Knowledge/issues/142)
+12. [TS如何设计Class的声明？](https://github.com/GGXXMM/FE-Knowledge/issues/143)
+
+### 函数
+13. [TS中的this和JS中的this有什么区别？](https://github.com/GGXXMM/FE-Knowledge/issues/144)
+
+### 泛型
+14. [TS中的泛型的应用场景](https://github.com/GGXXMM/FE-Knowledge/issues/145)
+
+### 原理
+15. [逆变、协变、双向协变和不变的理解？](https://github.com/GGXXMM/FE-Knowledge/issues/146)
+16. [编译TS用tsc还是babel？](https://github.com/GGXXMM/FE-Knowledge/issues/147)
 
 ## 六、框架
 ### Vue
@@ -131,32 +156,32 @@
 30. [SPA、SSR的区别是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/110)
 31. [Vue3的新特性](https://github.com/GGXXMM/FE-Knowledge/issues/77)
 32. [如何看待Vue3的Composition API？](https://github.com/GGXXMM/FE-Knowledge/issues/131)
-32. [Vue3性能提升表现在哪几方面？](https://github.com/GGXXMM/FE-Knowledge/issues/126)
-33. [对Vue设计理念的理解](https://github.com/GGXXMM/FE-Knowledge/issues/75)
-34. [Vuex的设计思想](https://github.com/GGXXMM/FE-Knowledge/issues/40)
-35. [Vuex中的getters和state的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/41)
-36. [Vuex中actions和mutations有什么区别？](https://github.com/GGXXMM/FE-Knowledge/issues/123)
-37. [为什么Vuex的mutation中不能做异步操作？](https://github.com/GGXXMM/FE-Knowledge/issues/42)
-38. [页面刷新后Vuex的state数据丢失怎么解决？](https://github.com/GGXXMM/FE-Knowledge/issues/124)
-39. [vue-router中如何保护指定路由的安全？](https://github.com/GGXXMM/FE-Knowledge/issues/79)
-40. [怎么缓存当前组件？缓存后怎么更新？](https://github.com/GGXXMM/FE-Knowledge/issues/113)
-41. [keep-alive缓存的机制](https://github.com/GGXXMM/FE-Knowledge/issues/94)
-42. [Vue中什么是递归组件？举例说明下](https://github.com/GGXXMM/FE-Knowledge/issues/115)
-43. [nextTick是干什么的？实现原理是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/80)
-44. [vue插槽是如何运作的?](https://github.com/GGXXMM/FE-Knowledge/issues/82)
-45. [手写实现EventBus](https://github.com/GGXXMM/FE-Knowledge/tree/master/Vue/%E6%89%8B%E5%86%99EventBus)
-46. [手写vue的双向绑定](https://github.com/GGXXMM/FE-Knowledge/issues/92)
-47. [手写vuex（实现思路）](https://github.com/GGXXMM/FE-Knowledge/issues/125)
-48. [手写vue-router路由](https://github.com/GGXXMM/FE-Knowledge/issues/112)
-49. [手写axios](https://github.com/GGXXMM/FE-Knowledge/issues/93)
+33. [Vue3性能提升表现在哪几方面？](https://github.com/GGXXMM/FE-Knowledge/issues/126)
+34. [对Vue设计理念的理解](https://github.com/GGXXMM/FE-Knowledge/issues/75)
+35. [Vuex的设计思想](https://github.com/GGXXMM/FE-Knowledge/issues/40)
+36. [Vuex中的getters和state的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/41)
+37. [Vuex中actions和mutations有什么区别？](https://github.com/GGXXMM/FE-Knowledge/issues/123)
+38. [为什么Vuex的mutation中不能做异步操作？](https://github.com/GGXXMM/FE-Knowledge/issues/42)
+39. [页面刷新后Vuex的state数据丢失怎么解决？](https://github.com/GGXXMM/FE-Knowledge/issues/124)
+40. [vue-router中如何保护指定路由的安全？](https://github.com/GGXXMM/FE-Knowledge/issues/79)
+41. [怎么缓存当前组件？缓存后怎么更新？](https://github.com/GGXXMM/FE-Knowledge/issues/113)
+42. [keep-alive缓存的机制](https://github.com/GGXXMM/FE-Knowledge/issues/94)
+43. [Vue中什么是递归组件？举例说明下](https://github.com/GGXXMM/FE-Knowledge/issues/115)
+44. [nextTick是干什么的？实现原理是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/80)
+45. [vue插槽是如何运作的?](https://github.com/GGXXMM/FE-Knowledge/issues/82)
+46. [手写实现EventBus](https://github.com/GGXXMM/FE-Knowledge/tree/master/Vue/%E6%89%8B%E5%86%99EventBus)
+47. [手写vue的双向绑定](https://github.com/GGXXMM/FE-Knowledge/issues/92)
+48. [手写vuex（实现思路）](https://github.com/GGXXMM/FE-Knowledge/issues/125)
+49. [手写vue-router路由](https://github.com/GGXXMM/FE-Knowledge/issues/112)
+50. [手写axios](https://github.com/GGXXMM/FE-Knowledge/issues/93)
 
 ## 七、工具
 ### webpack
 1. [为什么需要构建工具？为什么选择webpack？](https://github.com/GGXXMM/FE-Knowledge/issues/83)
-2. [webpack基本配置？构建过程？](https://github.com/GGXXMM/FE-Knowledge/issues/84)
+2. [webpack基本配置？](https://github.com/GGXXMM/FE-Knowledge/issues/84)
 3. [webpack的热更新使用及原理分析（是如何做到在不刷新浏览器的前提下更新页面的）](https://github.com/GGXXMM/FE-Knowledge/issues/85)
 4. [webpack的性能优化](https://github.com/GGXXMM/FE-Knowledge/issues/86)
-5. [webpack工作原理](https://github.com/GGXXMM/FE-Knowledge/issues/87)
+5. [webpack构建原理](https://github.com/GGXXMM/FE-Knowledge/issues/87)
 6. [Tapable插件架构与Hooks设计](https://github.com/GGXXMM/FE-Knowledge/issues/88)
 7. [vite为什么比webpack快？vite工作原理？](https://github.com/GGXXMM/FE-Knowledge/issues/132)
 
@@ -178,7 +203,7 @@
 4. [HTTP协议？HTTP报文组成（请求报文、响应报文）](https://github.com/GGXXMM/FE-Knowledge/issues/21)
 5. [HTTP1.0、HTTP1.1、HTTP2.0的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/22)
 6. [HTTP常见状态码](https://github.com/GGXXMM/FE-Knowledge/issues/23)
-7. [HTTP请求方式（8种），get和post请求区别？](https://github.com/GGXXMM/FE-Knowledge/issues/24)
+7. [HTTP请求方式（9种），get和post请求区别？](https://github.com/GGXXMM/FE-Knowledge/issues/24)
 8. [图解HTTPS](https://github.com/GGXXMM/FE-Knowledge/issues/25)
 
 ## 十、安全
