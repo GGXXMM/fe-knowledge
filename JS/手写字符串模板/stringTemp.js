@@ -1,3 +1,9 @@
+/**
+ * 字符串模版解析
+ * @param {string} template 字符串模板
+ * @param {object} data 
+ * @returns 
+ */
 function render(template, data) {
   const reg = /\$\{(\w+)\}/;
   if(reg.test(template)){

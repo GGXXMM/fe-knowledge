@@ -1,3 +1,4 @@
+// 创建 img 图片元素
 const myImage = (function(){
   let imgNode = document.createElement('img')
   document.body.appendChild( imgNode )
@@ -8,6 +9,9 @@ const myImage = (function(){
   }
 })()
 
+/**
+ * 预加载
+ */
 const preLoad = (function(){
   let img = new Image();
   img.onload = function() {
