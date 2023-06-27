@@ -4,9 +4,9 @@
 ### 常见数据结构
 1. [数组](./常考算法题/数组)
 2. [字符串](./常考算法题/字符串)
-3. 链表
-4. 栈
-5. 队列
+3. [链表](./常考算法题/链表)
+4. [栈](./常考算法题/栈)
+5. [队列](./常考算法题/队列)
 6. 双端队列
 7. 树
 
@@ -94,7 +94,7 @@
 22. [手写一个Promise](https://github.com/GGXXMM/FE-Knowledge/issues/61)
 23. [手写async/await](https://github.com/GGXXMM/FE-Knowledge/issues/91)
 
-## 五、TS
+## 五、TS （TODO）
 ### 基础类型
 1. [Typescript和JavaScript的区别](https://github.com/GGXXMM/FE-Knowledge/issues/133)
 2. [TS中any和unknown类型区别](https://github.com/GGXXMM/FE-Knowledge/issues/134)
@@ -124,56 +124,64 @@
 
 ## 六、框架
 ### Vue
-1. [谈谈你对MVC、MVP和MVVM的理解](https://github.com/GGXXMM/FE-Knowledge/issues/78)
-2. [谈谈你对v-model双向绑定原理的理解？](https://github.com/GGXXMM/FE-Knowledge/issues/108)
-3. [谈谈你对vue响应式原理的理解？](https://github.com/GGXXMM/FE-Knowledge/issues/81)
-4. [Vue2.0响应式原理中Object.defineProperty有什么缺陷？为什么在Vue3.0采用了Proxy？](https://github.com/GGXXMM/FE-Knowledge/issues/34)
-5. [介绍Object.defineProperty()](https://github.com/GGXXMM/FE-Knowledge/issues/60)
-6. [介绍Proxy实现数据响应](https://github.com/GGXXMM/FE-Knowledge/issues/71)
-7. [说说从template到render的处理过程](https://github.com/GGXXMM/FE-Knowledge/issues/111)
-8. [Vue实例挂载的过程中发生了什么？](https://github.com/GGXXMM/FE-Knowledge/issues/122)
-9. [Virtual DOM？它是如何提升性能的？](https://github.com/GGXXMM/FE-Knowledge/issues/35)
-10. [Vue的diff时间复杂度如何从O(n^3)优化到 O(n)？](https://github.com/GGXXMM/FE-Knowledge/issues/36)
-11. [Vue v-if/v-for 哪个优先级更高？](https://github.com/GGXXMM/FE-Knowledge/issues/70)
-12. [Vue v-show 和 v-if 的区别](https://github.com/GGXXMM/FE-Knowledge/issues/129)
-13. [v-once的使用场景有哪些？](https://github.com/GGXXMM/FE-Knowledge/issues/114)
-14. [Vue中的key作用和原理](https://github.com/GGXXMM/FE-Knowledge/issues/73)
-15. [自定义指令及其使用场景有哪些？](https://github.com/GGXXMM/FE-Knowledge/issues/116)
-16. [computed、methods、watch 的区别?](https://github.com/GGXXMM/FE-Knowledge/issues/130)
-17. [Vue组件data为什么必须是个函数而Vue的根实例则没有此限制？](https://github.com/GGXXMM/FE-Knowledge/issues/72)
-18. [对Vue组件化的理解](https://github.com/GGXXMM/FE-Knowledge/issues/74)
-19. [Vue组件间的通信方式（9种）](https://github.com/GGXXMM/FE-Knowledge/issues/37)
-20. [Vue中，子组件为何不可以修改父组件传递的Props？](https://github.com/GGXXMM/FE-Knowledge/issues/38)
-21. [简述 Vue 的生命周期以及每个阶段做的事](https://github.com/GGXXMM/FE-Knowledge/issues/107)
-22. [Vue的父组件和子组件生命周期钩子执行顺序是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/39)
-23. [Vue如何扩展一个组件](https://github.com/GGXXMM/FE-Knowledge/issues/117)
-24. [Vue要做权限管理该怎么做?控制到按钮级别的权限怎么做?](https://github.com/GGXXMM/FE-Knowledge/issues/118)
-25. [从0到1构架一个vue项目，说说有哪些步骤、哪些重要 插件、目录结构你会怎么组织?](https://github.com/GGXXMM/FE-Knowledge/issues/119)
-26. [实际工作中，你总结的vue最佳实践有哪些?](https://github.com/GGXXMM/FE-Knowledge/issues/120)
-27. [你是怎么处理vue项目中的错误？](https://github.com/GGXXMM/FE-Knowledge/issues/121)
-28. [了解哪些vue性能优化的方法](https://github.com/GGXXMM/FE-Knowledge/issues/76)
-29. [vue渲染大量数据时应该怎么优化？](https://github.com/GGXXMM/FE-Knowledge/issues/109)
-30. [SPA、SSR的区别是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/110)
-31. [Vue3的新特性](https://github.com/GGXXMM/FE-Knowledge/issues/77)
-32. [如何看待Vue3的Composition API？](https://github.com/GGXXMM/FE-Knowledge/issues/131)
-33. [Vue3性能提升表现在哪几方面？](https://github.com/GGXXMM/FE-Knowledge/issues/126)
-34. [对Vue设计理念的理解](https://github.com/GGXXMM/FE-Knowledge/issues/75)
-35. [Vuex的设计思想](https://github.com/GGXXMM/FE-Knowledge/issues/40)
-36. [Vuex中的getters和state的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/41)
-37. [Vuex中actions和mutations有什么区别？](https://github.com/GGXXMM/FE-Knowledge/issues/123)
-38. [为什么Vuex的mutation中不能做异步操作？](https://github.com/GGXXMM/FE-Knowledge/issues/42)
-39. [页面刷新后Vuex的state数据丢失怎么解决？](https://github.com/GGXXMM/FE-Knowledge/issues/124)
-40. [vue-router中如何保护指定路由的安全？](https://github.com/GGXXMM/FE-Knowledge/issues/79)
-41. [怎么缓存当前组件？缓存后怎么更新？](https://github.com/GGXXMM/FE-Knowledge/issues/113)
-42. [keep-alive缓存的机制](https://github.com/GGXXMM/FE-Knowledge/issues/94)
-43. [Vue中什么是递归组件？举例说明下](https://github.com/GGXXMM/FE-Knowledge/issues/115)
-44. [nextTick是干什么的？实现原理是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/80)
-45. [vue插槽是如何运作的?](https://github.com/GGXXMM/FE-Knowledge/issues/82)
-46. [手写实现EventBus](https://github.com/GGXXMM/FE-Knowledge/tree/master/Vue/%E6%89%8B%E5%86%99EventBus)
-47. [手写vue的双向绑定](https://github.com/GGXXMM/FE-Knowledge/issues/92)
+1. [SPA、SSR的区别是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/110)
+2. [简述 Vue 的生命周期以及每个阶段做的事](https://github.com/GGXXMM/FE-Knowledge/issues/107)
+3. [你对MVC、MVP和MVVM的理解](https://github.com/GGXXMM/FE-Knowledge/issues/78)
+4. [对Vue设计理念的理解](https://github.com/GGXXMM/FE-Knowledge/issues/75)
+5. [对Vue组件化的理解](https://github.com/GGXXMM/FE-Knowledge/issues/74)
+5. [你对v-model双向绑定原理的理解？](https://github.com/GGXXMM/FE-Knowledge/issues/108)
+6. [Virtual DOM？它是如何提升性能的？](https://github.com/GGXXMM/FE-Knowledge/issues/35)
+7. [你对vue响应式原理的理解？](https://github.com/GGXXMM/FE-Knowledge/issues/81)
+8. [手写vue的数据响应式](https://github.com/GGXXMM/FE-Knowledge/issues/92)
+9. [你对vue编译原理的理解？从template到render的处理过程](https://github.com/GGXXMM/FE-Knowledge/issues/111)
+10. [Vue实例挂载的过程中发生了什么？](https://github.com/GGXXMM/FE-Knowledge/issues/122)
+11. [Vue的 diff 时间复杂度如何从O(n^3)优化到 O(n)？vue2和vue3 diff 有什么差异？](https://github.com/GGXXMM/FE-Knowledge/issues/36)
+12. [Vue中的 key 作用？为什么建议不用index作为key？](https://github.com/GGXXMM/FE-Knowledge/issues/73)
+13. [Vue要做权限管理该怎么做?控制到按钮级别的权限怎么做?](https://github.com/GGXXMM/FE-Knowledge/issues/118)
+14. [你是怎么处理vue项目中的错误？](https://github.com/GGXXMM/FE-Knowledge/issues/121)
+15. [了解哪些vue性能优化的方法](https://github.com/GGXXMM/FE-Knowledge/issues/76)
+16. [vue渲染大量数据时应该怎么优化？](https://github.com/GGXXMM/FE-Knowledge/issues/109)
+17. [实际工作中，总结的vue最佳实践有哪些?](https://github.com/GGXXMM/FE-Knowledge/issues/120)
+18. [从0到1构架一个vue项目，说说有哪些步骤、哪些重要 插件、目录结构你会怎么组织?](https://github.com/GGXXMM/FE-Knowledge/issues/119)
+
+#### Vue2
+19. [Vue v-if/v-for 哪个优先级更高？](https://github.com/GGXXMM/FE-Knowledge/issues/70)
+20. [Vue v-show 和 v-if 的区别](https://github.com/GGXXMM/FE-Knowledge/issues/129)
+21. [v-once 的使用场景有哪些？](https://github.com/GGXXMM/FE-Knowledge/issues/114)
+22. [自定义指令及其使用场景有哪些？](https://github.com/GGXXMM/FE-Knowledge/issues/116)
+23. [computed、methods、watch 的区别?](https://github.com/GGXXMM/FE-Knowledge/issues/130)
+24. [Vue的父组件和子组件生命周期钩子执行顺序是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/39)
+25. [Vue组件间的通信方式（9种）](https://github.com/GGXXMM/FE-Knowledge/issues/37)
+26. [Vue中，子组件为何不可以修改父组件传递的Props？](https://github.com/GGXXMM/FE-Knowledge/issues/38)
+27. [Vue如何扩展一个组件？](https://github.com/GGXXMM/FE-Knowledge/issues/117)
+28. [Vue中什么是递归组件？举例说明下](https://github.com/GGXXMM/FE-Knowledge/issues/115)
+29. [Vue中什么是异步组件？举例说明下](https://github.com/GGXXMM/FE-Knowledge/issues/113)
+30. [Vue组件data为什么必须是个函数而Vue的根实例则没有此限制？](https://github.com/GGXXMM/FE-Knowledge/issues/72)
+31. [nextTick是干什么的？实现原理是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/80)
+32. [keep-alive缓存的机制](https://github.com/GGXXMM/FE-Knowledge/issues/94)
+33. [vue插槽是如何运作的?](https://github.com/GGXXMM/FE-Knowledge/issues/82)
+34. [Vue2.0响应式原理中Object.defineProperty有什么缺陷？为什么在Vue3.0采用了Proxy？](https://github.com/GGXXMM/FE-Knowledge/issues/34)
+35. [介绍Object.defineProperty()](https://github.com/GGXXMM/FE-Knowledge/issues/60)
+36. [手写实现EventBus](https://github.com/GGXXMM/FE-Knowledge/tree/master/Vue/%E6%89%8B%E5%86%99EventBus)
+
+#### Vue3
+37. [Vue3 的设计目标是什么？做了哪些优化?](https://github.com/GGXXMM/FE-Knowledge/issues/77)（TODO）
+38. [如何看待Vue3的Composition API？与vue2的Options API有什么不同？](https://github.com/GGXXMM/FE-Knowledge/issues/131)
+39. [Vue3性能提升表现在哪几方面？](https://github.com/GGXXMM/FE-Knowledge/issues/126)
+41. [Vue3为什么用Proxy代替Object.defineProperty？](https://github.com/GGXXMM/FE-Knowledge/issues/71)
+
+### Vuex
+42. [Vuex的设计思想](https://github.com/GGXXMM/FE-Knowledge/issues/40)
+43. [Vuex中的getters和state的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/41)
+44. [Vuex中actions和mutations有什么区别？](https://github.com/GGXXMM/FE-Knowledge/issues/123)
+46. [为什么Vuex的mutation中不能做异步操作？](https://github.com/GGXXMM/FE-Knowledge/issues/42)
+47. [页面刷新后Vuex的state数据丢失怎么解决？](https://github.com/GGXXMM/FE-Knowledge/issues/124)
 48. [手写vuex（实现思路）](https://github.com/GGXXMM/FE-Knowledge/issues/125)
-49. [手写vue-router路由](https://github.com/GGXXMM/FE-Knowledge/issues/112)
-50. [手写axios](https://github.com/GGXXMM/FE-Knowledge/issues/93)
+### vue-router
+49. [vue-router中如何保护指定路由的安全？](https://github.com/GGXXMM/FE-Knowledge/issues/79)
+50. [手写vue-router路由](https://github.com/GGXXMM/FE-Knowledge/issues/112)
+### axios
+51. [手写axios](https://github.com/GGXXMM/FE-Knowledge/issues/93)
 
 ## 七、工具
 ### webpack
@@ -202,9 +210,12 @@
 3. [TCP三次握手和四次挥手](https://github.com/GGXXMM/FE-Knowledge/issues/20)
 4. [HTTP协议？HTTP报文组成（请求报文、响应报文）](https://github.com/GGXXMM/FE-Knowledge/issues/21)
 5. [HTTP1.0、HTTP1.1、HTTP2.0的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/22)
-6. [HTTP常见状态码](https://github.com/GGXXMM/FE-Knowledge/issues/23)
-7. [HTTP请求方式（9种），get和post请求区别？](https://github.com/GGXXMM/FE-Knowledge/issues/24)
-8. [图解HTTPS](https://github.com/GGXXMM/FE-Knowledge/issues/25)
+6. [HTTP2的头部压缩算法是怎样的？](https://github.com/GGXXMM/FE-Knowledge/issues/148)
+7. [HTTP3是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/149)
+8. [HTTP常见状态码](https://github.com/GGXXMM/FE-Knowledge/issues/23)
+9. [HTTP请求方式（9种），get和post请求区别？](https://github.com/GGXXMM/FE-Knowledge/issues/24)
+10. [HTTP和HTTPS的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/150)
+11. [HTTPS通信过程](https://github.com/GGXXMM/FE-Knowledge/issues/25)
 
 ## 十、安全
 1. [XSS攻击？如何防御？](https://github.com/GGXXMM/FE-Knowledge/issues/26)
