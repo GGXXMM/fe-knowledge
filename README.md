@@ -124,7 +124,7 @@
 
 ## 六、框架
 ### Vue
-1. [SPA、SSR的区别是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/110)
+1. [SPA、MPA的区别是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/110)
 2. [简述 Vue 的生命周期以及每个阶段做的事](https://github.com/GGXXMM/FE-Knowledge/issues/107)
 3. [你对MVC、MVP和MVVM的理解](https://github.com/GGXXMM/FE-Knowledge/issues/78)
 4. [对Vue设计理念的理解](https://github.com/GGXXMM/FE-Knowledge/issues/75)
@@ -165,10 +165,9 @@
 36. [手写实现EventBus](https://github.com/GGXXMM/FE-Knowledge/tree/master/Vue/%E6%89%8B%E5%86%99EventBus)
 
 #### Vue3
-37. [Vue3 的设计目标是什么？做了哪些优化?](https://github.com/GGXXMM/FE-Knowledge/issues/77)（TODO）
-38. [如何看待Vue3的Composition API？与vue2的Options API有什么不同？](https://github.com/GGXXMM/FE-Knowledge/issues/131)
-39. [Vue3性能提升表现在哪几方面？](https://github.com/GGXXMM/FE-Knowledge/issues/126)
-41. [Vue3为什么用Proxy代替Object.defineProperty？](https://github.com/GGXXMM/FE-Knowledge/issues/71)
+37. [Vue3 的设计目标是什么？具体如何实现的？](https://github.com/GGXXMM/FE-Knowledge/issues/77)
+38. [如何看待Vue3的 Composition API？](https://github.com/GGXXMM/FE-Knowledge/issues/131)
+39. [Vue3 性能提升表现在哪几方面？](https://github.com/GGXXMM/FE-Knowledge/issues/126)
 
 ### Vuex
 42. [Vuex的设计思想](https://github.com/GGXXMM/FE-Knowledge/issues/40)
