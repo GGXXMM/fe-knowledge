@@ -94,36 +94,36 @@
 22. [手写一个Promise](https://github.com/GGXXMM/FE-Knowledge/issues/61)
 23. [手写async/await](https://github.com/GGXXMM/FE-Knowledge/issues/91)
 
-## 五、TS （TODO）
+## 五、TS
 ### 基础类型
-1. [Typescript和JavaScript的区别](https://github.com/GGXXMM/FE-Knowledge/issues/133)
-2. [TS中any和unknown类型区别](https://github.com/GGXXMM/FE-Knowledge/issues/134)
-3. [TS中never和void的区别](https://github.com/GGXXMM/FE-Knowledge/issues/135)
-4. [tsconfig.json有什么作用？](https://github.com/GGXXMM/FE-Knowledge/issues/136)
+1. [Typescript 和 JavaScript的区别](https://github.com/GGXXMM/FE-Knowledge/issues/133)
+2. [TS中 any 和 unknown 类型区别](https://github.com/GGXXMM/FE-Knowledge/issues/134)
+3. [TS中 never 和 void 的区别](https://github.com/GGXXMM/FE-Knowledge/issues/135)
+4. [tsconfig.json 有什么作用？](https://github.com/GGXXMM/FE-Knowledge/issues/136)
 ### 高级类型
-5. [TS中使用Union Types时有哪些注意事项？](https://github.com/GGXXMM/FE-Knowledge/issues/137)
-6. [TS中keyof、typeof关键字的作用](https://github.com/GGXXMM/FE-Knowledge/issues/138)
-7. [类型别名type和接口interface区别？](https://github.com/GGXXMM/FE-Knowledge/issues/139)
+5. [TS中使用 Union Types 时有哪些注意事项？](https://github.com/GGXXMM/FE-Knowledge/issues/137)
+6. [TS中 keyof、typeof 关键字的作用](https://github.com/GGXXMM/FE-Knowledge/issues/138)
+7. [类型别名 type 和接口 interface 区别？](https://github.com/GGXXMM/FE-Knowledge/issues/139)
 ### 接口
-9. [TS中interface可以给Function/Array/Class(Indexable)做声明吗？](https://github.com/GGXXMM/FE-Knowledge/issues/140)
-10. [TS中同名的interface或者同名的interface和class会合并吗？](https://github.com/GGXXMM/FE-Knowledge/issues/141)
+9. [TS中 interface 可以给 Function/Array/Class(Indexable) 做声明吗？](https://github.com/GGXXMM/FE-Knowledge/issues/140)
+10. [TS中同名的 interface 或者同名的 interface 和 class 会合并吗？](https://github.com/GGXXMM/FE-Knowledge/issues/141)
 
 ### 类
 11. [TS中的类及其特性](https://github.com/GGXXMM/FE-Knowledge/issues/142)
-12. [TS如何设计Class的声明？](https://github.com/GGXXMM/FE-Knowledge/issues/143)
+12. [TS如何设计 Class 的声明？](https://github.com/GGXXMM/FE-Knowledge/issues/143)
 
 ### 函数
-13. [TS中的this和JS中的this有什么区别？](https://github.com/GGXXMM/FE-Knowledge/issues/144)
+13. [TS中的 this 和JS中的 this 有什么区别？](https://github.com/GGXXMM/FE-Knowledge/issues/144)
 
 ### 泛型
 14. [TS中的泛型的应用场景](https://github.com/GGXXMM/FE-Knowledge/issues/145)
 
 ### 原理
 15. [逆变、协变、双向协变和不变的理解？](https://github.com/GGXXMM/FE-Knowledge/issues/146)
-16. [编译TS用tsc还是babel？](https://github.com/GGXXMM/FE-Knowledge/issues/147)
+16. [编译TS用 tsc 还是 babel？](https://github.com/GGXXMM/FE-Knowledge/issues/147)
 
 ## 六、框架
-### Vue
+### Vue 生态
 1. [SPA、MPA的区别是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/110)
 2. [简述 Vue 的生命周期以及每个阶段做的事](https://github.com/GGXXMM/FE-Knowledge/issues/107)
 3. [你对MVC、MVP和MVVM的理解](https://github.com/GGXXMM/FE-Knowledge/issues/78)
@@ -169,17 +169,17 @@
 38. [如何看待Vue3的 Composition API？](https://github.com/GGXXMM/FE-Knowledge/issues/131)
 39. [Vue3 性能提升表现在哪几方面？](https://github.com/GGXXMM/FE-Knowledge/issues/126)
 
-### Vuex
+#### Vuex
 42. [Vuex的设计思想](https://github.com/GGXXMM/FE-Knowledge/issues/40)
 43. [Vuex中的getters和state的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/41)
 44. [Vuex中actions和mutations有什么区别？](https://github.com/GGXXMM/FE-Knowledge/issues/123)
 46. [为什么Vuex的mutation中不能做异步操作？](https://github.com/GGXXMM/FE-Knowledge/issues/42)
 47. [页面刷新后Vuex的state数据丢失怎么解决？](https://github.com/GGXXMM/FE-Knowledge/issues/124)
 48. [手写vuex（实现思路）](https://github.com/GGXXMM/FE-Knowledge/issues/125)
-### vue-router
+#### vue-router
 49. [vue-router中如何保护指定路由的安全？](https://github.com/GGXXMM/FE-Knowledge/issues/79)
 50. [手写vue-router路由](https://github.com/GGXXMM/FE-Knowledge/issues/112)
-### axios
+#### axios
 51. [手写axios](https://github.com/GGXXMM/FE-Knowledge/issues/93)
 
 ## 七、工具
