@@ -11,12 +11,12 @@
 7. 图
 
 ### 算法
-1. [排序算法](https://github.com/GGXXMM/FE-Knowledge/issues/43)
-2. [递归和回溯算法](https://github.com/GGXXMM/FE-Knowledge/issues/44)
-3. [深度优先和广度优先搜索](https://github.com/GGXXMM/FE-Knowledge/issues/45)
-4. [二分搜索](https://github.com/GGXXMM/FE-Knowledge/issues/46)
-5. [动态规划](https://github.com/GGXXMM/FE-Knowledge/issues/47)
-6. [贪心算法](https://github.com/GGXXMM/FE-Knowledge/issues/48)
+1. [排序算法]()
+2. [递归和回溯算法]()
+3. [深度优先和广度优先搜索]()
+4. [二分搜索]()
+5. [动态规划](./常考算法题/动态规划)
+6. [贪心算法](./常考算法题/贪心算法)
 
 ## 二、HTML、CSS
 1. [介绍下重绘和回流](https://github.com/GGXXMM/FE-Knowledge/issues/62)
@@ -189,7 +189,7 @@
 3. [webpack的热更新使用及原理分析（是如何做到在不刷新浏览器的前提下更新页面的）](https://github.com/GGXXMM/FE-Knowledge/issues/85)
 4. [webpack的性能优化](https://github.com/GGXXMM/FE-Knowledge/issues/86)
 5. [webpack构建原理](https://github.com/GGXXMM/FE-Knowledge/issues/87)
-6. [Tapable插件架构与Hooks设计](https://github.com/GGXXMM/FE-Knowledge/issues/88)
+6. [Rollup基础配置？及其构建原理？](https://github.com/GGXXMM/fe-knowledge/issues/151)
 7. [vite为什么比webpack快？vite工作原理？](https://github.com/GGXXMM/FE-Knowledge/issues/132)
 
 ### babel
