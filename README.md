@@ -12,7 +12,7 @@
 
 ### 算法
 1. [排序算法]()
-2. [递归]()
+2. [递归](./常考算法题/递归)
 3. [回溯算法]()
 4. [深度优先和广度优先搜索](./常考算法题/DFS+BFS)
 5. [二分查找](./常考算法题/二分查找)
@@ -190,8 +190,12 @@
 3. [webpack的热更新使用及原理分析（是如何做到在不刷新浏览器的前提下更新页面的）](https://github.com/GGXXMM/FE-Knowledge/issues/85)
 4. [webpack的性能优化](https://github.com/GGXXMM/FE-Knowledge/issues/86)
 5. [webpack构建原理](https://github.com/GGXXMM/FE-Knowledge/issues/87)
-6. [Rollup基础配置？及其构建原理？](https://github.com/GGXXMM/fe-knowledge/issues/151)
-7. [vite为什么比webpack快？vite工作原理？](https://github.com/GGXXMM/FE-Knowledge/issues/132)
+
+### Rollup
+1. [Rollup基础配置？及其构建原理？](https://github.com/GGXXMM/fe-knowledge/issues/151)
+
+### Vite
+1. [vite为什么比webpack快？vite工作原理？](https://github.com/GGXXMM/FE-Knowledge/issues/132)
 
 ### babel
 1. [Babel的原理是什么？](https://github.com/GGXXMM/FE-Knowledge/issues/95)
