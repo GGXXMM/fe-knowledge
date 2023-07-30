@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  height: 400px;
+}
+.inner {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  background: pink;
+}
