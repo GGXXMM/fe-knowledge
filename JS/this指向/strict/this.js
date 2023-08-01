@@ -6,4 +6,8 @@ function fn() {
   console.log(this)// undefined
 }
 
+(function(){
+  console.log(this)// undefineds
+})()
+
 fn()
