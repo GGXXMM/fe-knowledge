@@ -1,31 +1,48 @@
 /**
  * 实现如下简单异步队列Queue，分别在 1,3,4 秒后打印出 “1”, “2”, “3”
  */
-class Queue{
-  constructor(){
-    this._event = []
-  }
-  task(time, callback) {
-    this._event.push({time: time, fn: callback})
-    return this;
-  }
-  start() {
-    if(this._event.length === 0) {
-      return;
-    }
-    let item = this._event.shift()
-    setTimeout(()=> {
-      item.fn()
-      this.start()
-    }, item.time)
-  }
-}
+// 1. setTimeout
+// const task = (timer, callback) => {
+//   setTimeout(()=> {
+//     callback && callback()
+//   }, timer)
+// }
+// task(1000, ()=> {
+//   console.log(1)
+//   task(3000, ()=> {
+//     console.log(2)
+//     task(4000, ()=> {
+//       console.log(3)
+//     })
+//   })
+// })
 
-const q = new Queue();
-q.task(1000, ()=>{
-	console.log(1)
-}).task(2000, ()=>{
-	console.log(2)
-}).task(1000, ()=>{
-	console.log(3)
-}).start()
+// 2. promise
+const task = (timer, printFn) => {
+  return new Promise((resolve, reject)=> {
+    setTimeout(()=> {
+      if(printFn == 'one') {
+        console.log(1)
+      }else if(printFn == 'two') {
+        console.log(2)
+      }else if(printFn == 'three') {
+        console.log(3)
+      }
+      resolve()
+    }, timer)
+  })
+}
+// const taskRuner = ()=> {
+//   task(1000, 'one')
+//     .then(() => task(3000, 'two'))
+//     .then(() => task(4000, 'three'))
+// }
+// taskRuner();
+
+// 3. async/await
+const taskRuner = async () => {
+  await task(1000, 'one')
+  await task(3000, 'two')
+  await task(4000, 'three')
+}
+taskRuner()
