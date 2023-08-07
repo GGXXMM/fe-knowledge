@@ -2,16 +2,29 @@
 .container {
   width: 300px;
 }
-.left {
+/* 单行文本 */
+.single-line .left {
   background: yellow;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   direction: rtl;
 }
-.right {
+.single-line .right {
   background: pink;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+/* 多行文本 */
+.multiple-lines {
+  margin-top: 20px;
+}
+.multiple-lines div {
+  display: -webkit-box;/** 弹性伸缩盒布局 */
+  -webkit-box-orient: vertical;/** 从上到下排列 */
+  -webkit-line-clamp: 2;/** 限制文本行数2 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: greenyellow;
 }
