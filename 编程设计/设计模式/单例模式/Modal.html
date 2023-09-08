@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模态框</title>
+  <style>
+    #modal {
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      line-height: 400px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid #ddd;
+      box-shadow: 
+        0px 12px 32px 4px rgba(0, 0, 0, .36),
+        0px 8px 20px rgba(0, 0, 0, .72);
+    }
+  </style>
+</head>
+<body>
+  <button id="open">打开</button>
+  <button id="close">关闭</button>
+  <script>
+    // 单例模式创建 modal
+    const Modal = (function() {
+      let modal = null;
+      return function() {
+        if(!modal) {
+          modal = document.createElement('div');
+          modal.id = 'modal';
+          modal.innerHTML = '我是模态框！';
+          modal.style.display = 'none';
+          document.body.appendChild(modal)
+        }
+        return modal
+      }
+    })()
+
+    // 事件监听
+    document.getElementById('open').addEventListener('click', function(){
+      const modal = new Modal();
+      modal.style.display = 'block';
+    })
+
+    document.getElementById('close').addEventListener('click', function(){
+      const modal = new Modal();
+      if(modal) {
+        modal.style.display = 'none';
+      }
+    })
+  </script>
+</body>
+</html>
