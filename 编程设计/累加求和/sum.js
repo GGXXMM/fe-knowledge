@@ -11,7 +11,7 @@ function summation(n) {
   return n + summation(n-1);
 }
 
-// 2.for循环
+// 2.for循环（迭代）
 function summation(n) {
   let sum = 0;
   for(let i = 1;i<=n;i++) {
@@ -21,13 +21,13 @@ function summation(n) {
 }
 
 // 3.reduce
-// function summation(n) {
-//   let arr = [];
-//   for(let i = 1;i<=n;i++) {
-//     arr.push(i);
-//   }
-//   let sum = arr.reduce((prev, cur) =>  prev + cur, 0)
-//   return sum;
-// }
+function summation(n) {
+  let arr = [];
+  for(let i = 1;i<=n;i++) {
+    arr.push(i);
+  }
+  let sum = arr.reduce((prev, cur) =>  prev + cur, 0)
+  return sum;
+}
 
 console.log(summation(4))

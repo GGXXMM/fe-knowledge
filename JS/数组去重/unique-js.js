@@ -4,7 +4,7 @@
  * 优点：正向思维，删除重复的元素
  * 缺点：
  * 1）双层循环，时间复杂度为O(n^2)，效率较低
- * 2）NaN和{}空对象都没有去重，为true的布尔值、null值会直接被删除
+ * 2）NaN和{}空对象都没有去重
  */
 function unique(arr) {
     for(let i = 0;i<arr.length;i++) {
@@ -52,24 +52,23 @@ function unique(arr) {
  * 缺点：NaN和{}空对象都没有去重
  */
 function unique(arr) {
-	var array = arr;
 	var len = arr.length;
 
-	array.sort();//排序后更加方便去重
+	arr.sort();//排序后更加方便去重
 	function loop(index) {
 		if(index >= 1) {
-			if(array[index] === array[index-1]) {
-				array.splice(index,1);
+			if(arr[index] === arr[index-1]) {
+				arr.splice(index,1);
 			}
 			loop(index - 1); // 递归调用loop函数
 		}
 	}
 	loop(len -1);
-	return array;
+	return arr;
 }
 
 /**
- * 5. filter
+ * 5. filter+indexOf
  * 缺点：{}空对象没有去重，对NaN和‘NaN’错误去重
  */
 function unique(arr) {
@@ -80,8 +79,7 @@ function unique(arr) {
 }
 
 /**
- * 6. 对象属性（错误去重，不建议使用）
- * 缺点：2个true直接删除了，对NaN和‘NaN’错误去重
+ * 6. 对象属性
  */
 function unique(arr) {
 	var array = [];
@@ -103,6 +101,6 @@ function unique(arr) {
 function unique(arr) {
 	var obj = {};
 	return arr.filter(function(item, index, arr) {
-		return obj.hasOwnProperty(typeof item) ? false : (obj[typeof item + item] = true)
+		return obj.hasOwnProperty(typeof item) ? false : (obj[typeof item] = true)
 	});
 }

@@ -13,16 +13,24 @@
     // 模拟vue中的data, 多个响应式数据
     let data = {
       msg: 'hello',
-      count: 1
+      user: {
+        id: 1,
+        name: 'zhangsan'
+      }
     }
 
     // 模拟vue实例
     let vm = {}
-    proxyData(data)
 
-    function proxyData(data) {
+    function observeData(data) {
+      if(!data || typeof data !== 'object') {
+        return
+      }
       // 遍历data对象的所有属性
       Object.keys(data).forEach(key => {
+        let current = data[key]
+        // 递归遍历嵌套属性
+        observeData(current)
         // 把data上的属性挂载到vm，并转换getter/setter
         Object.defineProperty(vm, key, {
           // 可枚举(可遍历)
@@ -45,9 +53,11 @@
         })
       })
     }
+    observeData(data)
 
     vm.msg = 'hello world';
-    console.log(vm.msg)
+    vm.user.name = 'lisi'
+    console.log(vm)
   </script>
 </body>
 </html>

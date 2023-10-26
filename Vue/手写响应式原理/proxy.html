@@ -13,7 +13,10 @@
     // 模拟vue中的data, 多个响应式数据
     let data = {
       msg: 'hello',
-      count: 1
+      user: {
+        id: 1,
+        name: 'zhangsan'
+      }
     }
     // 模拟vue实例，proxy代理data对象
     let vm = new Proxy(data, {
@@ -33,7 +36,8 @@
     })
 
     vm.msg = 'hello world';
-    console.log(vm.msg)
+    vm.user.name = 'lisi'
+    console.log(vm)
   </script>
 </body>
 </html>
