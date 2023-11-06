@@ -51,7 +51,7 @@
 10. [JavaScript实现继承的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/8)
 11. [JavaScript数组去重的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/9)
 12. [JavaScript数组扁平化](https://github.com/GGXXMM/FE-Knowledge/issues/89)
-13. [JavaScript实现数组原型上的遍历方法forEach、map、filter、some、every、reduce](./JS/手写数组原型方法forEach+map+filter+some+every+reduce)
+13. [JavaScript实现数组原型上的遍历方法forEach、map、filter、some、reduce](./JS/手写数组原型方法forEach+map+filter+some+every+reduce)
 14. [JavaScript模拟实现new关键字](https://github.com/GGXXMM/FE-Knowledge/issues/10)
 15. [JavaScript模拟实现Object.create](https://github.com/GGXXMM/FE-Knowledge/issues/99)
 16. [JavaScript模拟实现Object.assign](https://github.com/GGXXMM/FE-Knowledge/issues/100)

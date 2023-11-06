@@ -7,7 +7,7 @@ function fn() {
 }
 
 (function(){
-  console.log(this)// undefineds
+  console.log(this)// undefined
 })()
 
 fn()
