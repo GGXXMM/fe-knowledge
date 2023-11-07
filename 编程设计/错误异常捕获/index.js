@@ -42,6 +42,13 @@
 //   }
 // }
 
+/** URIError URI处理错误 */
+try {
+  decodeURIComponent("%");
+} catch (e) {
+  console.log(e instanceof URIError); // true
+}
+
 /* 异步错误 */
 // try {
 //   setTimeout(() => {

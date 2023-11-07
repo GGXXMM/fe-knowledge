@@ -18,31 +18,31 @@
 // })
 
 // 2. promise
-const task = (timer, printFn) => {
+const task = (timer) => {
   return new Promise((resolve, reject)=> {
     setTimeout(()=> {
-      if(printFn == 'one') {
+      if(timer === 1000) {
         console.log(1)
-      }else if(printFn == 'two') {
+      }else if(timer === 3000) {
         console.log(2)
-      }else if(printFn == 'three') {
+      }else if(timer === 4000) {
         console.log(3)
       }
       resolve()
     }, timer)
   })
 }
-// const taskRuner = ()=> {
-//   task(1000, 'one')
-//     .then(() => task(3000, 'two'))
-//     .then(() => task(4000, 'three'))
-// }
-// taskRuner();
+const taskRuner = ()=> {
+  task(1000)
+    .then(() => task(3000))
+    .then(() => task(4000))
+}
+taskRuner();
 
 // 3. async/await
-const taskRuner = async () => {
-  await task(1000, 'one')
-  await task(3000, 'two')
-  await task(4000, 'three')
-}
-taskRuner()
+// const taskRuner = async () => {
+//   await task(1000)
+//   await task(3000)
+//   await task(4000)
+// }
+// taskRuner()

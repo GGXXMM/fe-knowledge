@@ -1,7 +1,7 @@
 /**
  * 实现call：改变当前函数 this 指向
  * @param {Object} context 绑定对象
- * @param  {any} args 参数，格式：“,”分隔
+ * @param  {any} args 传递给调用函数的参数，格式：“,”分隔
  * @returns 
  */
 Function.prototype.myCall = function(context = window, ...args) {
