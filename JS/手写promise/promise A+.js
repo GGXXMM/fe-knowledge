@@ -190,3 +190,10 @@ Promise.race = function(items) {
     }
   })
 }
+
+// Test
+const p = new Promise((resolve, reject) => {
+  resolve('resolve')
+}).then(res => {
+  console.log('then: ', res)
+})
