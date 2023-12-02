@@ -205,8 +205,7 @@
 2. [git reset、git revert 和 git checkout的区别？](https://github.com/GGXXMM/FE-Knowledge/issues/97)
 
 ## 八、性能优化
-1. [性能优化之加载篇]()
-2. [性能优化之执行篇]()
+1. [性能优化（概要篇）](https://juejin.cn/post/7306800304250437644)
 
 ## 九、网络
 1. [浏览器输入url到页面展示的全过程(综合)](https://github.com/GGXXMM/FE-Knowledge/issues/18)
