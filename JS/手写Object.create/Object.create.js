@@ -1,3 +1,9 @@
+/**
+ * Object.create：以proto作为原型创建新对象
+ * @param {object} proto 
+ * @param {*} propertyObject 
+ * @returns 
+ */
 function create(proto, propertyObject=undefined){
   if(typeof proto !== 'object' && typeof proto !== 'function') {
     throw new TypeError('Object prototype may only be an Object or null')
