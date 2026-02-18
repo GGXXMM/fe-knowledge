@@ -20,10 +20,13 @@ const compose = function(...args) {
     return f1.call(null, result)
   }
 }
-/**2、将函数数组反转，利用reduce实现（抖机灵） */
+/** 2、将函数数组反转，利用reduce实现（抖机灵） */
 const reduceFunc = (f, g) => g.call(this, f.apply(this, arg))
 const compose = (...args) => args.reverse().reduce(reduceFunc, args.shift())
 
+
+/** 3、利用 reduceRight 实现 */
+const compose = (...funcs) => (arg) => funcs.reduceRight((prev, fn) => fn(prev), arg)
 /**3、reduce实现继续拓展，promise执行 */
 const compose = function(...args) {
   let init = args.pop()

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this 绑定</title>
+</head>
+<body>
+  <script>
+    /** 1. 默认绑定：函数调用时，this指向全局对象window */
+    // function foo() {
+    //   console.log(this.a);
+    // }
+    // var a = 1;
+    // foo();
+
+    /** 2. 隐式绑定：this指向调用该函数的对象 */
+    // function foo() {
+    //   console.log(this.a);
+    // }
+    // let obj1 = {
+    //   a: 1,
+    //   foo,
+    // };
+    // let obj2 = {
+    //   a: 2,
+    //   foo,
+    // }
+
+    // obj1.foo();   // 输出 1
+    // obj2.foo();   // 输出 2
+
+    /** 3. 显式绑定：this指向call、apply、bind方法的第一个参数 */
+    // function foo(a, b) {
+    //   console.log(this.base + a + b);
+    // }
+    // const obj1 = { base: 10 };
+    // const obj2 = { base: 20 };
+    // foo.call(obj1, 1, 2);   // 输出 13
+    // foo.apply(obj2, [1, 2]); // 输出 23
+    // foo.bind(obj1, 1, 2)();   // 输出 13
+    // foo.bind(obj2, 1, 2)(); // 输出 23
+
+    /** 4. new 绑定：this指向实例化的对象 */
+    function foo(val) {
+      this.a = val;
+      console.log(this.a);
+    }
+    const obj1 = new foo(10); // 输出 10
+    const obj2 = new foo(20); // 输出 20
+  </script>
+</body>
+</html>

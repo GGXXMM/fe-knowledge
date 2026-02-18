@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clock时钟摆动</title>
+</head>
+<body>
+  <canvas id="clock" width="400" height="400"></canvas>
+  <script>
+    const canvas = document.getElementById('clock');
+    const ctx = canvas.getContext('2d');
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = 150;
+
+    function drawClock() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw clock face
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+      ctx.stroke();
+
+      // Draw hour marks
+      for (let i = 0; i < 12; i++) {
+        const angle = (i * Math.PI) / 6;
+        const x1 = centerX + Math.cos(angle) * (radius - 20);
+        const y1 = centerY + Math.sin(angle) * (radius - 20);
+        const x2 = centerX + Math.cos(angle) * radius;
+        const y2 = centerY + Math.sin(angle) * radius;
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+      }
+
+      // Get current time
+      const now = new Date();
+      const hours = now.getHours() % 12;
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+
+      // Draw hour hand
+      const hourAngle = (hours * Math.PI) / 6 + (minutes * Math.PI) / (6 * 60);
+      drawHand(hourAngle, radius * 0.5, 8);
+
+      // Draw minute hand
+      const minuteAngle = (minutes * Math.PI) / 30 + (seconds * Math.PI) / (30 * 60);
+      drawHand(minuteAngle, radius * 0.8, 6);
+
+      // Draw second hand
+      const secondAngle = (seconds * Math.PI) / 30;
+      drawHand(secondAngle, radius * 0.9, 2);
+
+      // Draw pendulum
+      drawPendulum();
+    }
+
+    function drawHand(angle, length, width) {
+      ctx.save();
+      ctx.translate(centerX, centerY);
+      ctx.rotate(angle - Math.PI / 2);
+      ctx.beginPath();
+      ctx.lineWidth = width;
+      ctx.moveTo(0, 0);
+      ctx.lineTo(length, 0);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawPendulum() {
+      const pendulumLength = 100;
+      const pendulumAngle = Math.sin(Date.now() * 0.005) * 0.3; // Oscillating angle
+
+      ctx.save();
+      ctx.translate(centerX, centerY + radius + 20);
+      ctx.rotate(pendulumAngle);
+
+      // Draw pendulum rod
+      ctx.beginPath();
+      ctx.lineWidth = 4;
+      ctx.moveTo(0, 0);
+      ctx.lineTo(0, pendulumLength);
+      ctx.stroke();
+
+      // Draw pendulum bob
+      ctx.beginPath();
+      ctx.arc(0, pendulumLength, 10, 0, 2 * Math.PI);
+      ctx.fill();
+
+      ctx.restore();
+    }
+
+    function animate() {
+      drawClock();
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>

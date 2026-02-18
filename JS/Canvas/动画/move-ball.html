@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>移动的小球</title>
+</head>
+<body>
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    // 1. 定义图形状态（封装为对象，便于管理）
+    const ball = {
+      x: 100, // 初始化x坐标
+      y: 100, // 初始化y坐标
+      r: 20, // 半径
+      speedX: 3, // x方向速度
+      speedY: 2, // y方向速度
+      color: '#9952e1'
+    }
+
+    // 2. 定义动画函数
+    function animate() {
+      // 1）清除上一帧 clearRect(x,y width, height) 【x,y：指的是矩形画布的左上角坐标】
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // 2）更新图形状态（移动 + 边界反弹）
+      ball.x += ball.speedX;
+      ball.y += ball.speedY;
+      // 左右边界反弹
+      if (ball.x + ball.r > canvas.width || ball.x - ball.r < 0) {
+        ball.speedX = -ball.speedX;
+      }
+      if(ball.y + ball.r > canvas.height || ball.y - ball.r < 0) {
+        ball.speedY = -ball.speedY;
+      }
+      // 3）绘制当前帧
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
+      ctx.fillStyle = ball.color; 
+      ctx.fill();
+
+      // 4）递归调用，继续下一帧绘制
+      requestAnimationFrame(animate);
+    }
+    // 3. 启动执行动画
+    animate();
+  </script>
+</html>

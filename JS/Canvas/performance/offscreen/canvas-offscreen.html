@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>离屏 OffscreenCanvas + Web Worker</title>
+  <style>
+    canvas {
+        border: 1px solid #333;
+        margin: 20px 0;
+    }
+    .control {
+        margin-bottom: 20px;
+    }
+    button, input {
+        padding: 8px 16px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .tip {
+        color: #666;
+        margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h3>OffscreenCanvas 简易 Demo（有 Worker 支持时使用离屏）</h3>
+  </div>
+  <div class="control">
+    <button id="toggle">Pause</button>
+    <label>速度：</label>
+    <input type="number" id="speed" value="1" min="0.1" max="5" step="0.1">
+  </div>
+  <!-- 画布 -->
+  <canvas id="canvas"></canvas>
+  <div class="tip" id="modeTip">模式：检测中...</div>
+
+  <script>
+    /*
+     * 实现思路：移交控制权offscreenCanvas -> 转移对象 -> Worker 渲染 -> 主线程交互
+     *
+     */
+    (function() {
+      // 1. 获取画布和上下文
+      const canvas = document.getElementById('canvas');
+      const toggle = document.getElementById('toggle');
+      const speedEl = document.getElementById('speed');
+      const modeTip = document.getElementById('modeTip');
+      
+      // 2. 定义全局状态变量
+      let worker = null;// worker 实例
+      let running = true;// 动画运行状态
+      let speed = Number(speedEl.value) || 1;// 速度
+      
+      // 3. 辅助函数：更新运行模式（提示）
+      function updateModeTip(mode) {
+        modeTip.textContent = `模式：${mode}`;
+      }
+
+      // 4. 核心：启动 Web Worker + OffscreenCanvas 方案
+      function startWorkerMode() {
+        try {
+          // 4.1 创建 Worker 实例
+          worker = new Worker()
+        } catch (err) {
+          console.warn('Worker 创建失败，回退到主线程', err);
+          startMainThreadMode();
+          return;
+        }
+
+        // 4.2 获取 Canvas 布局信息，移交控制权生成 OffscreenCanvas
+        const rect = canvas.getBoundingClientRect();
+        canvas.style.width = `${rect.width}px`;
+        canvas.style.height = `${rect.height}px`;
+        const offscreenCanvas = canvas.transferControlToOffscreen();
+
+        // 4.3 启动 Worker 线程
+        worker.postMessage({
+          type: 'init',
+
+        })
+      }
+
+      // 5. 兜底：主线程 + 普通 Canvas 方案
+      let mainCtx = null;
+      let ball = null;
+      let lastTime = 0;
+
+      function startMainThreadMode() {
+        // 5.1 初始化普通 Canvas
+        mainCtx = canvas.getContext('2d')
+        const rect = canvas.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+
+        // 高清屏适配：设置 Canvas 实际分辨率
+        canvas.width = Math.round(rect.width * dpr);
+        canvas.height = Math.round(rect.height * dpr);
+        mainCtx.setTransform(dpr, 0, 0, dpr, 0, 0);// 缩放上下文
+
+        // 5.2 初始化球体状态
+        ball = {
+          x: rect.width / 2,// 中心点 x 坐标
+          y: rect.height / 2,// 中心点 y 坐标
+          r: 20,// 球体半径
+          vx: 200 * speed,// x 方向速度
+          vy: 200 * speed,// y 方向速度
+          width: rect.width,
+          height: rect.height
+        }
+
+        // 5.3 记录初始时间戳，启动帧循环
+        lastTime = performance.now();
+        requestAnimationFrame(mainThreadLoop);
+
+        // 5.4 窗口大小自适应
+        window.addEventListener('resize', () => {
+          const newRect = canvas.getBoundingClientRect();
+          const dpr = window.devicePixelRatio || 1;
+          canvas.width = Math.round(newRect.width * dpr);
+          canvas.height = Math.round(newRect.height * dpr);
+          mainCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          // 更新球体画布尺寸
+          ball.width = newRect.width;
+          ball.height = newRect.height;
+        })
+
+        // 5.5 更新模式提示
+        
+      }
+
+      // 6. 能力检测：决定启用哪种渲染
+      function init() {
+        // 核心特性是否支持
+        const isSupportOffscreen = window.OffscreenCanvas && 
+                                   window.Worker && 
+                                   HTMLCanvasElement.prototype.transferControlToOffscreen;
+        if (isSupportOffscreen) {
+          startWorkerMode();
+        } else {
+          startMainThreadMode();
+        }
+      }
+
+      // 7. 交互控制：暂停/恢复
+      toggle.addEventListener('click', () => {
+        running = !running;
+        toggle.textContent = running ? 'Pause' : 'Resume';
+
+        // 向 Worker 发送暂停/恢复指令
+        if(worker) {
+          worker.postMessage({
+            type: running ? 'resume' : 'pause'
+          })
+        }
+      })
+    })()
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>绘制点</title>
+</head>
+<body>
+  <canvas id="canvas" width="200" height="200"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    /** 绘制点 */
+    // 1. 矩形方点（fillRect）
+    ctx.fillStyle = 'red';
+    ctx.fillRect(50,50,2,2) // 一个2像素的点
+
+    // 2. 圆形点（arc）
+    ctx.fillStyle = 'blue';
+    ctx.beginPath();
+    ctx.arc(50,100,2,0,Math.PI*2) // 一个2像素的圆
+    ctx.fill();
+
+    // 3. lineCap（用短线画点）
+    ctx.strokeStyle = 'green';
+    ctx.lineCap = 'round';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(100,100);
+    ctx.lineTo(100.001,100.001)
+    ctx.stroke();
+
+    // 4. OffscreenCanvas
+    const off = new OffscreenCanvas(200,200);
+    const octx = off.getContext('2d');
+    octx.fillStyle='rgba(0,0,0,0.7)';
+    octx.fillRect(10,10,2,2);
+    // 主 ctx 绘制
+    ctx.drawImage(off,0,0);
+  </script>
+</body>
+</html>
