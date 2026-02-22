@@ -8,7 +8,6 @@
 4. [栈](./常考算法题/栈)
 5. [队列](./常考算法题/队列)
 6. [树](./常考算法题/树)
-7. [图]
 
 ### 算法
 1. [排序算法](./常考算法题/排序)
@@ -39,20 +38,36 @@
 17. [如何解决移动端Retina屏1px像素的问题？](https://github.com/GGXXMM/FE-Knowledge/issues/68)
 
 ## 三、JavaScript
-1. [JavaScript类型判断](https://github.com/GGXXMM/FE-Knowledge/issues/106)
-2. [JavaScript的类型转换（显示、隐式转换）](https://github.com/GGXXMM/FE-Knowledge/issues/105)
-3. [JavaScript的原型与原型链](https://github.com/GGXXMM/FE-Knowledge/issues/1)
-4. [JavaScript的执行上下文与执行上下文栈](https://github.com/GGXXMM/FE-Knowledge/issues/2)
-5. [JavaScript的作用域与作用域链](https://github.com/GGXXMM/FE-Knowledge/issues/3)
-6. [JavaScript的this](./JS/this指向/this.md)
-7. [JavaScript的闭包](./JS/闭包/closure.md)
-8. [JavaScript的垃圾回收机制和内存泄露](https://github.com/GGXXMM/FE-Knowledge/issues/6)
-9. [JavaScript创建对象的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/7)
-10. [JavaScript实现继承的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/8)
-11. [JavaScript数组去重的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/9)
-12. [JavaScript数组扁平化](https://github.com/GGXXMM/FE-Knowledge/issues/89)
-13. [JavaScript实现数组原型上的遍历方法forEach、map、filter、some、reduce](./JS/手写数组原型方法forEach+map+filter+some+every+reduce)
-14. [JavaScript模拟实现new关键字](https://github.com/GGXXMM/FE-Knowledge/issues/10)
+### 变量
+1. [变量声明有哪些？var、let、const的区别是？](https://github.com/GGXXMM/fe-knowledge/issues/59)
+2. [什么是变量提升？](https://github.com/GGXXMM/fe-knowledge/issues/152)
+
+### 数据类型
+1. [JavaScript数据类型（原始类型和引用类型）](https://github.com/GGXXMM/fe-knowledge/issues/153)
+2. [JavaScript类型判断](https://github.com/GGXXMM/FE-Knowledge/issues/106)
+3. [JavaScript的类型转换（显示、隐式转换）](https://github.com/GGXXMM/FE-Knowledge/issues/105)
+
+### 对象
+1. [JavaScript创建对象的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/7)
+2. [JavaScript实现继承的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/8)
+
+### 原型 & 原型链
+1. [JavaScript的原型与原型链](https://github.com/GGXXMM/FE-Knowledge/issues/1)
+
+### 数组
+1. [JavaScript数组去重的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/9)
+2. [JavaScript数组扁平化](https://github.com/GGXXMM/FE-Knowledge/issues/89)
+3. [JavaScript实现数组原型上的遍历方法forEach、map、filter、some、reduce](./JS/手写数组原型方法forEach+map+filter+some+every+reduce)
+
+### 作用域
+1. [JavaScript的作用域与作用域链](https://github.com/GGXXMM/FE-Knowledge/issues/3)
+2. [JavaScript的执行上下文与执行上下文栈](https://github.com/GGXXMM/FE-Knowledge/issues/2)
+3. [JavaScript的this](./JS/this指向/this.md)
+4. [JavaScript的闭包](./JS/闭包/closure.md)
+5. [JavaScript的垃圾回收机制和内存泄露](https://github.com/GGXXMM/FE-Knowledge/issues/6)
+
+### 手写代码
+1. [JavaScript模拟实现new关键字](https://github.com/GGXXMM/FE-Knowledge/issues/10)
 15. [JavaScript模拟实现Object.create](https://github.com/GGXXMM/FE-Knowledge/issues/99)
 16. [JavaScript模拟实现Object.assign](https://github.com/GGXXMM/FE-Knowledge/issues/100)
 17. [JavaScript模拟实现JSON.stringify](https://github.com/GGXXMM/FE-Knowledge/issues/11)
@@ -70,7 +85,7 @@
 28. [JavaScript实现图片预加载](https://github.com/GGXXMM/FE-Knowledge/issues/104)
 29. [js动画](https://github.com/GGXXMM/FE-Knowledge/issues/69)
 
-## 四、ES6
+## 四、进阶ES6
 1. [ES6 之 let 和 const](https://github.com/mqyqingfeng/Blog/issues/82)
 2. [ES6 之 模板字符串](https://github.com/mqyqingfeng/Blog/issues/84)
 3. [ES6 之 箭头函数](https://github.com/mqyqingfeng/Blog/issues/85)
