@@ -3,7 +3,7 @@
 ## 一、数据结构与算法
 ### 常见数据结构
 1. [字符串](./常考算法题/字符串/string.md)
-2. [数组](./常考算法题/数组)
+2. [数组](./常考算法题/数组/array.md)
 3. [链表](./常考算法题/链表)
 4. [栈](./常考算法题/栈)
 5. [队列](./常考算法题/队列)
@@ -43,28 +43,38 @@
 2. [什么是变量提升？](https://github.com/GGXXMM/fe-knowledge/issues/152)
 
 ### 数据类型
-1. [JavaScript数据类型（原始类型和引用类型）](https://github.com/GGXXMM/fe-knowledge/issues/153)
-2. [JavaScript类型判断](https://github.com/GGXXMM/FE-Knowledge/issues/106)
-3. [JavaScript的类型转换（显示、隐式转换）](https://github.com/GGXXMM/FE-Knowledge/issues/105)
+3. [JavaScript数据类型（原始类型和引用类型）](https://github.com/GGXXMM/fe-knowledge/issues/153)
+4. [JavaScript类型判断](https://github.com/GGXXMM/FE-Knowledge/issues/106)
+5. [JavaScript的类型转换（显示、隐式转换）](https://github.com/GGXXMM/FE-Knowledge/issues/105)
+6. [JavaScript中的真值和假值（Truthy / Falsy）有哪些？](https://github.com/GGXXMM/fe-knowledge/issues/154)
+
+#### 数组
+8. [JavaScript数组去重的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/9)
+9. [JavaScript数组扁平化](https://github.com/GGXXMM/FE-Knowledge/issues/89)
+10. [JavaScript实现数组原型上的遍历方法forEach、map、filter、some、reduce](./JS/手写数组原型方法forEach+map+filter+some+every+reduce)
 
 ### 对象
-1. [JavaScript创建对象的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/7)
-2. [JavaScript实现继承的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/8)
+5. [JavaScript创建对象的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/7)
+6. [JavaScript实现继承的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/8)
 
 ### 原型 & 原型链
-1. [JavaScript的原型与原型链](https://github.com/GGXXMM/FE-Knowledge/issues/1)
+7. [JavaScript的原型与原型链](https://github.com/GGXXMM/FE-Knowledge/issues/1)
 
-### 数组
-1. [JavaScript数组去重的多种方式及优缺点](https://github.com/GGXXMM/FE-Knowledge/issues/9)
-2. [JavaScript数组扁平化](https://github.com/GGXXMM/FE-Knowledge/issues/89)
-3. [JavaScript实现数组原型上的遍历方法forEach、map、filter、some、reduce](./JS/手写数组原型方法forEach+map+filter+some+every+reduce)
 
-### 作用域
-1. [JavaScript的作用域与作用域链](https://github.com/GGXXMM/FE-Knowledge/issues/3)
-2. [JavaScript的执行上下文与执行上下文栈](https://github.com/GGXXMM/FE-Knowledge/issues/2)
-3. [JavaScript的this](./JS/this指向/this.md)
-4. [JavaScript的闭包](./JS/闭包/closure.md)
-5. [JavaScript的垃圾回收机制和内存泄露](https://github.com/GGXXMM/FE-Knowledge/issues/6)
+### 作用域 & 作用域链
+11. [JavaScript的作用域与作用域链](https://github.com/GGXXMM/FE-Knowledge/issues/3)
+12. [JavaScript的执行上下文与执行上下文栈](https://github.com/GGXXMM/FE-Knowledge/issues/2)
+13. [JavaScript的this](./JS/this指向/this.md)
+14. [JavaScript的闭包](./JS/闭包/closure.md)
+15. [JavaScript的垃圾回收机制和内存泄露](https://github.com/GGXXMM/FE-Knowledge/issues/6)
+
+
+### 函数
+16. [JavaScript函数的声明的方式及其区别](https://github.com/GGXXMM/FE-Knowledge/issues/4)
+17. [编程范式的发展历程]()
+18. [函数式编程，有哪些核心函数类型？]()
+
+
 
 ### 手写代码
 1. [JavaScript模拟实现new关键字](https://github.com/GGXXMM/FE-Knowledge/issues/10)

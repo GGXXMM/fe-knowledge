@@ -25,6 +25,11 @@
         placeholder: '搜索知识库',
         depth: 3
       },
+      // 配置代码预览插件（可选，自定义样式）
+      codePreview: {
+        maxHeight: '600px', // 预览框最大高度
+        theme: 'vue' // 高亮主题（vue/dark/okaidia 等）
+      },
       // 代码高亮
       plugins: [
         function (hook, vm) {
