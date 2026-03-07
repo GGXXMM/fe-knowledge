@@ -14,7 +14,7 @@
     window.$docsify = {
       name: '',
       repo: 'https://github.com/GGXXMM/fe-knowledge',
-      // basePath: '/fe-knowledge/', // github pages 部署时使用
+      basePath: '/fe-knowledge/', // github pages 部署时使用
       // 关键2：自动生成侧边栏（读取当前页面的 h1/h2/h3）
       subMaxLevel: 3, // 解析到 h3 标题，可设 1/2/3
       // 关键3：自动将 README.md 的 h1 作为页面标题
@@ -40,38 +40,111 @@
       //   }
       // },
       /** 相对路径配置 */
-      plugins: [
-        function (hook, vm) {
-          hook.afterEach(function (html) {
-            // 匹配 ./常考算法题/字符串/xxx.js 格式的链接
-            const jsLinkReg = /<a href="(\.\/常考算法题\/字符串\/[^"]+\.js)"/g;
-            return html.replace(jsLinkReg, '<a href="$1" target="_blank" rel="noopener noreferrer"');
-          });
+       // 核心1：路由别名 - 批量映射短路径→真实长路径
+      alias: {
+        // 正则匹配所有 /xxx.js 短路径
+        '/(.+\\.js)$': function (match, fileName) {
+          // 所有算法子目录（完整列表）
+          const algorithmDirs = [
+            '字符串', '数组', '链表', '栈', '队列', '树', '二叉树', 
+            '递归', '二分查找', 'DFS+BFS', '回溯算法', '动态规划', '贪心算法'
+          ];
+
+          // 策略1：按文件名关键词精准匹配子目录（推荐，避免匹配错误）
+          for (const dir of algorithmDirs) {
+            // 若文件名包含子目录关键词，优先匹配该目录
+            if (fileName.includes(dir)) {
+              return `/常考算法题/${dir}/${fileName}`;
+            }
+          }
+
+          // 策略2：兜底 - 按目录顺序匹配（若文件名无关键词）
+          for (const dir of algorithmDirs) {
+            return `/常考算法题/${dir}/${fileName}`;
+          }
+
+          // 最终兜底：返回原路径避免404
+          return `/${fileName}`;
         }
-      ],
+      },
+
+      // 核心2：路由拦截 - 拦截短路径JS请求，跳转真实静态文件
       router: {
         beforeEach: function (path) {
-          if (path.endsWith('.js')) {
-            // 拼接完整静态路径：basePath + 实际路径
-            const staticPath = window.$docsify.basePath + path.replace(/^\/\.\/|^\//, '');
-            window.open(staticPath, '_blank');
+          // 匹配规则：根路径的JS文件（无子目录、非相对路径）
+          if (path.endsWith('.js') && !path.includes('/') && !path.startsWith('./')) {
+            const fileName = path.replace('/', ''); // 提取纯文件名
+            const algorithmDirs = [
+              '字符串', '数组', '链表', '栈', '队列', '树', '二叉树', 
+              '递归', '二分查找', 'DFS+BFS', '回溯算法', '动态规划', '贪心算法'
+            ];
+
+            // 拼接真实静态文件地址
+            let actualPath = '';
+            // 优先按文件名关键词匹配子目录
+            for (const dir of algorithmDirs) {
+              if (fileName.includes(dir)) {
+                actualPath = window.$docsify.basePath + `常考算法题/${dir}/${fileName}`;
+                break;
+              }
+            }
+
+            // 若无关键词匹配，取第一个目录兜底
+            if (!actualPath) {
+              actualPath = window.$docsify.basePath + `常考算法题/${algorithmDirs[0]}/${fileName}`;
+            }
+
+            // 打开新标签页访问真实JS文件，阻止Docsify路由解析
+            window.open(actualPath, '_blank');
             return '';
           }
         }
       },
-      // 代码高亮
-      // plugins: [
-      //   function (hook, vm) {
-      //     hook.beforeEach(function (html) {
-      //       return html
-      //     })
-      //   }
-      // ]
+
+      // 核心3：插件 - 自动替换Markdown中的短路径链接
+      plugins: [
+        function (hook, vm) {
+          // 所有算法子目录（与上面保持一致）
+          const algorithmDirs = [
+            '字符串', '数组', '链表', '栈', '队列', '树', '二叉树', 
+            '递归', '二分查找', 'DFS+BFS', '回溯算法', '动态规划', '贪心算法'
+          ];
+
+          // 解析Markdown后替换短路径链接
+          hook.afterEach(function (html) {
+            // 匹配Markdown中的 ./xxx.js 短路径
+            const shortLinkReg = /<a href="(\.\/[^\/]+\.js)"/g;
+
+            return html.replace(shortLinkReg, function (match, shortPath) {
+              const fileName = shortPath.replace('./', '');
+              let longPath = '';
+
+              // 优先按文件名关键词匹配子目录
+              for (const dir of algorithmDirs) {
+                if (fileName.includes(dir)) {
+                  longPath = `./常考算法题/${dir}/${fileName}`;
+                  break;
+                }
+              }
+
+              // 兜底：取第一个目录
+              if (!longPath) {
+                longPath = `./常考算法题/${algorithmDirs[0]}/${fileName}`;
+              }
+
+              // 添加target="_blank"避免路由解析
+              return `<a href="${longPath}" target="_blank" rel="noopener noreferrer"`;
+            });
+          });
+        }
+      ]
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <!-- 搜索插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>
