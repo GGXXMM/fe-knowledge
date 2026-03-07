@@ -14,7 +14,7 @@
     window.$docsify = {
       name: '',
       repo: 'https://github.com/GGXXMM/fe-knowledge',
-      basePath: '/fe-knowledge/', // github pages 部署时使用
+      // basePath: '/fe-knowledge/', // github pages 部署时使用
       // 关键2：自动生成侧边栏（读取当前页面的 h1/h2/h3）
       subMaxLevel: 3, // 解析到 h3 标题，可设 1/2/3
       // 关键3：自动将 README.md 的 h1 作为页面标题
@@ -29,6 +29,14 @@
       codePreview: {
         maxHeight: '600px', // 预览框最大高度
         theme: 'vue' // 高亮主题（vue/dark/okaidia 等）
+      },
+      // alias 别名，让 JS 文件指向静态路径
+      alias: {
+        // 匹配所有 .js 文件，指向静态文件地址
+        '/.+/\\.js$': function (path) {
+          // 拼接完整静态文件 URL
+          return 'https://ggxxmm.github.io/fe-knowledge/' + path.replace(/^\/\.\/|^\//, '');
+        }
       },
       // 代码高亮
       plugins: [
