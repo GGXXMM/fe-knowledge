@@ -30,22 +30,43 @@
         maxHeight: '600px', // 预览框最大高度
         theme: 'vue' // 高亮主题（vue/dark/okaidia 等）
       },
-      // alias 别名，让 JS 文件指向静态路径
-      alias: {
-        // 匹配所有 .js 文件，指向静态文件地址
-        '/.+/\\.js$': function (path) {
-          // 拼接完整静态文件 URL
-          return 'https://ggxxmm.github.io/fe-knowledge/' + path.replace(/^\/\.\/|^\//, '');
+      /** 绝对路径配置 */
+      // alias 配置，让 JS 文件指向静态路径
+      // alias: {
+      //   // 匹配所有 .js 文件，指向静态文件地址
+      //   '/.+/\\.js$': function (path) {
+      //     // 拼接完整静态文件 URL
+      //     return 'https://ggxxmm.github.io/fe-knowledge/' + path.replace(/^\/\.\/|^\//, '');
+      //   }
+      // },
+      /** 相对路径配置 */
+      plugins: [
+        function (hook, vm) {
+          hook.afterEach(function (html) {
+            // 匹配 ./常考算法题/字符串/xxx.js 格式的链接
+            const jsLinkReg = /<a href="(\.\/常考算法题\/字符串\/[^"]+\.js)"/g;
+            return html.replace(jsLinkReg, '<a href="$1" target="_blank" rel="noopener noreferrer"');
+          });
+        }
+      ],
+      router: {
+        beforeEach: function (path) {
+          if (path.endsWith('.js')) {
+            // 拼接完整静态路径：basePath + 实际路径
+            const staticPath = window.$docsify.basePath + path.replace(/^\/\.\/|^\//, '');
+            window.open(staticPath, '_blank');
+            return '';
+          }
         }
       },
       // 代码高亮
-      plugins: [
-        function (hook, vm) {
-          hook.beforeEach(function (html) {
-            return html
-          })
-        }
-      ]
+      // plugins: [
+      //   function (hook, vm) {
+      //     hook.beforeEach(function (html) {
+      //       return html
+      //     })
+      //   }
+      // ]
     }
   </script>
   <!-- Docsify v4 -->
