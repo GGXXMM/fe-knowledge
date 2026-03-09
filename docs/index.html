@@ -101,7 +101,7 @@
         }
       },
 
-      // 核心3：插件 - 自动替换Markdown中的短路径链接
+      // 核心3：插件 - 自动替换Markdown中的短路径链接为GitHub Pages绝对地址
       plugins: [
         function (hook, vm) {
           // 所有算法子目录（与上面保持一致）
@@ -110,6 +110,12 @@
             '递归', '二分查找', 'DFS+BFS', '回溯算法', '动态规划', '贪心算法'
           ];
 
+          // 从repo地址解析GitHub用户名
+          const repoUrl = window.$docsify.repo;
+          const userName = repoUrl.match(/github\.com\/([^\/]+)\//)?.[1].toLowerCase() || 'ggxxmm';
+          const repoName = repoUrl.match(/github\.com\/[^\/]+\/([^\/]+)/)?.[1] || 'fe-knowledge';
+          const gitHubPagesBase = `https://${userName}.github.io/${repoName}`;
+
           // 解析Markdown后替换短路径链接
           hook.afterEach(function (html) {
             // 匹配Markdown中的 ./xxx.js 短路径
@@ -117,23 +123,26 @@
 
             return html.replace(shortLinkReg, function (match, shortPath) {
               const fileName = shortPath.replace('./', '');
-              let longPath = '';
+              let subDir = '';
 
               // 优先按文件名关键词匹配子目录
               for (const dir of algorithmDirs) {
                 if (fileName.includes(dir)) {
-                  longPath = `./常考算法题/${dir}/${fileName}`;
+                  subDir = dir;
                   break;
                 }
               }
 
               // 兜底：取第一个目录
-              if (!longPath) {
-                longPath = `./常考算法题/${algorithmDirs[0]}/${fileName}`;
+              if (!subDir) {
+                subDir = algorithmDirs[0];
               }
 
-              // 添加target="_blank"避免路由解析
-              return `<a href="${longPath}" target="_blank" rel="noopener noreferrer"`;
+              // 拼接完整的GitHub Pages绝对URL
+              const fullUrl = `${gitHubPagesBase}/常考算法题/${subDir}/${fileName}`;
+
+              // 添加target="_blank"在新标签页打开
+              return `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer"`;
             });
           });
         }
