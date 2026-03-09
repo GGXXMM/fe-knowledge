@@ -66,6 +66,49 @@
           return `${gitHubPagesBase}/常考算法题/${subDir}/${fileName}`;
         }
       },
+      // 路由配置：拦截 JS 文件请求，直接跳转到 GitHub Pages
+      router: {
+        beforeEach: function (path) {
+          // 匹配所有 .js 文件路径
+          if (path.endsWith('.js')) {
+            // 从repo地址解析GitHub用户名
+            const repoUrl = window.$docsify.repo;
+            const userName = repoUrl.match(/github\.com\/([^\/]+)\//)?.[1] || 'ggxxmm';
+            const repoName = repoUrl.match(/github\.com\/[^\/]+\/([^\/]+)/)?.[1] || 'fe-knowledge';
+            const gitHubPagesBase = `https://${userName}.github.io/${repoName}`;
+
+            // 所有算法子目录（完整列表）
+            const algorithmDirs = [
+              '字符串', '数组', '链表', '栈', '队列', '树', '二叉树', 
+              '递归', '二分查找', 'DFS+BFS', '回溯算法', '动态规划', '贪心算法'
+            ];
+
+            // 提取文件名（去掉前导 /）
+            const fileName = path.replace(/^\//, '');
+            let subDir = '';
+
+            // 优先按文件名关键词匹配子目录
+            for (const dir of algorithmDirs) {
+              if (fileName.includes(dir)) {
+                subDir = dir;
+                break;
+              }
+            }
+
+            // 兜底：取第一个目录
+            if (!subDir) {
+              subDir = algorithmDirs[0];
+            }
+
+            // 拼接完整的GitHub Pages绝对URL
+            const fullUrl = `${gitHubPagesBase}/常考算法题/${subDir}/${fileName}`;
+
+            // 在新标签页打开外部链接，阻止 Docsify 路由
+            window.open(fullUrl, '_blank');
+            return false; // 阻止路由处理
+          }
+        }
+      },
       // 代码高亮
       plugins: [
         function (hook, vm) {
